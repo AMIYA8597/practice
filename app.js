@@ -242,3 +242,28 @@
 // let a = "barce"
 // let b = "lona"
 // console.log(a  + b)
+
+
+
+// trim method in string
+
+// const num =prompt("enter your password");
+// console.log(num);
+// const pass=num.trim()
+// console.log(pass)
+
+// indexOf method in string
+
+let febPerson = "i love messi ";
+console.log(febPerson.indexOf("love"));
+
+// // lastIndexOf method in string
+// let junePerson ="I love to code javascript";
+// console.log(junePerson.lastIndexOf("to"))
+
+// // startsWith and endsWith methods
+
+// const str = 'Hello World';
+
+// console.log(str.startsWith('H'));
+// console.log(str.endsWith('d'));
