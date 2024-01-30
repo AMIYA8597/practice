@@ -1,3 +1,8 @@
+// https://www.geeksforgeeks.org/how-to-merge-flatten-an-array-of-arrays-in-javascript/?ref=ml_lbp
+
+// https://www.linkedin.com/pulse/arrays-javascript-versatile-data-structures-dynamic-ankita-panpatil-/
+
+
 // Online Javascript Editor for free
 // Write, Edit and Run your Javascript code using JS Online Compiler
 
@@ -13,6 +18,58 @@
 // console.log(constant.next().value);
 // console.log(constant.next().value);
 // console.log(constant.next().value);
+
+
+// let firstName = prompt("enter your first name :");
+// console.log(firstName);
+// let lastName = prompt("enter your last name :");
+// console.log(lastName);
+// let fullname = `${firstName} ${lastName}`;
+// console.log(`full name is :${fullname}`);
+// let age = prompt("Enter your Age: ");
+// console.log(age);
+// age = parseInt(age)
+// if (isNaN(age)) {
+//     alert('please enter a valid number');
+//     } else if (age < 0) {
+//         alert('Age cannot be negative')
+//         } else if (age > 120) {
+//             alert ('You are too old!')
+//             } else {
+//                 document.write(`Your age is ${age}`);
+//                 }
+//                 function flattenArray(arr){
+//                    return arr.reduce((accumulator , currentValue)=> accumulator.concat
+//                    (currentValue instanceof Array ? flattenArray(currentValue) : currentValue),[]
+//                    );
+//                 };
+//                 let multiDimArr = [[1,2], [3,[4,5]], 6];
+//                 console.log(flattenArray(multiDimArr));
+//                 function findMax(arr){
+//                     let maxNum = arr[0] ;
+//                     for(let i=1;i<arr.length;i++){
+//                        if(maxNum<arr[i]){
+//                         maxNum = arr[i];
+//                         }
+//                       }return maxNum;
+//                 }
+//                 console.log(findMax([9,8,7,6,5,4,3,2,1]));
+//                 console.log(findMax(["a","b","c","d"]));
+// function checkTypeOf(val){
+//     switch(typeof val){
+//         case 'string':
+//             return `This value is string`;
+//         case 'number':
+//             return `This value is Number`;
+//         case 'boolean':
+//             return `This value is boolean`
+//         default:
+//             return `Unknown data type`;
+//     }
+// }
+// console.log(checkTypeOf('Hello World'));
+// console.log(checkTypeOf(123));
+// console.log(checkTypeOf(true));
 
 
 
@@ -157,3 +214,31 @@
 // else {
 //     console.log("it is not a good string")
 // }
+
+
+
+
+// JavaScript Array Declared
+// var a = ['messi' , 'neymar', 'suarez', 'inesta','xavi', 'mascherano'];
+
+// a.push('Geeks');
+// a.push('For');
+// a.push('Geeks');
+
+// // Obtaining the value
+// console.log(a);
+
+
+// // Array.splice 
+
+// let array = ['barca', 'barc', 'bar ']
+
+// array.splice(array.length, 0 , 'real', 'madrid');
+// console.log(array);
+
+
+// // string concation
+
+// let a = "barce"
+// let b = "lona"
+// console.log(a  + b)
