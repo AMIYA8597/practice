@@ -254,8 +254,8 @@
 
 // indexOf method in string
 
-let febPerson = "i love messi ";
-console.log(febPerson.indexOf("love"));
+// let febPerson = "i love messi ";
+// console.log(febPerson.indexOf("love"));
 
 // // lastIndexOf method in string
 // let junePerson ="I love to code javascript";
@@ -267,3 +267,306 @@ console.log(febPerson.indexOf("love"));
 
 // console.log(str.startsWith('H'));
 // console.log(str.endsWith('d'));
+
+
+
+
+
+
+
+
+
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+// console.log("Welcome to Programiz!");
+
+// let array = ["spy", 'super','honda','premier'];
+// console.log(array)
+// let newArr= array.reverse()
+// console.log(newArr)
+
+// let splitArr=array
+
+
+// let array = [1 , 2 , 3 ,4,5,6,7,8 ]
+// let even = 0;
+// for(let i =0; i<=array.length-1; i+=2) {
+//     console.log(i)
+//     even+=i
+// }
+// console.log(even)
+
+
+
+// let array = [1,2,3,10,15,6,7,8, ]
+// let odd= 0;
+// for(let i =1; i<=array.length-1; i+=2) {
+//     console.log(array[i])
+//     odd+=array[i]
+// }
+// console.log(odd)
+
+// let array =[ 10,43,45,57,20];
+// let even =0;
+// let odd=0;
+// for (let i=0;i<array.length; i++){
+//     if(array[i]%2==0){
+        
+//         even+=array[i]
+//     }
+//     else {
+//         odd+=array[i]
+//     }
+//     // console.log(array[i])
+// }
+// console.log(even)
+// console.log(odd)
+
+
+
+// let m =20;
+// let n =4;
+// let sum =0;
+// let div =0;
+// for (let i=1; i<=m; i++){
+//     // console.log(i)
+//     if(i%n!==0){
+//         sum+=i
+//     //   console.log("divided is",div)  
+//     }
+// }
+// console.log(sum)
+
+// console.log(sum-div)
+
+
+// const myArr = [[1,2],[3,4],[5,6],[77,88]];
+// const newArr = myArr.flat();
+// console.log(newArr)
+
+// multiplication
+
+// const number =19;
+
+// // const newNumber=1;
+
+// for (let i=1;i<=10; i++)
+// {
+//   let umber=i * number
+//   console.log(umber)
+// }
+
+
+
+
+// const number = parseInt(prompt('Enter an integer: '));
+// const number = 19;
+
+// //creating a multiplication table
+// for(let i = 1; i <= 10; i++) {
+
+//     // multiply i with number
+//     const result = i * number;
+
+//     // display the result
+//     // console.log(`${number} * ${i} = ${result}`);
+//     console.log(result)
+// }
+// // console.log(result)
+
+
+// const number = 26;
+
+// for (let i=1;i<=10;i++){
+//     let multiplicationResult = number * i;
+//     console.log(multiplicationResult)
+// }
+
+
+// const number = 260;
+
+// for (let i=10;i>=1;i--){
+//     let multiplicationResult = number / i;
+//     console.log(multiplicationResult)
+// }
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let fruit = fruits.at(2);
+// console.log(fruit);
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let fruit = fruits[1];
+// console.log(fruit);
+
+
+// let array = [68,78,88,62,45,74,37,9,39,74,51,96,101]
+// let maxNeed = 1;
+
+// for(let i=0;i<=array.length-1;i++){
+//     if(array[i] >maxNeed){
+//         maxNeed=array[i]
+//     }
+//     // console.log(maxNeed)
+// }
+// console.log(maxNeed)
+
+
+
+// let array = [68, 78, 88, 62, 45, 74, 37, 9, 39, 74, 51, 96, 101];
+
+// // Initialize max, secondMax, and thirdMax with smallest possible values
+// let max = Number.MIN_SAFE_INTEGER;
+// let secondMax = Number.MIN_SAFE_INTEGER;
+// let thirdMax = Number.MIN_SAFE_INTEGER;
+
+// for (let i = 0; i < array.length; i++) {
+//     if (array[i] > max) {
+//         thirdMax = secondMax;
+//         secondMax = max;
+//         max = array[i];
+//     } else if (array[i] > secondMax && array[i] < max) {
+//         thirdMax = secondMax;
+//         secondMax = array[i];
+//     } else if (array[i] > thirdMax && array[i] < secondMax) {
+//         thirdMax = array[i];
+//     }
+// }
+
+// console.log("Third largest number is:", thirdMax);
+
+
+
+// var array = [10, 5, 8, 20, 15];
+// var max = -Infinity;
+// var secondMax = -Infinity;
+
+// for (var i = 0; i < array.length; i++) {
+//     if (array[i] > max) {
+//         secondMax = max;
+//         max = array[i];
+//     } else if (array[i] > secondMax && array[i] < max) {
+//         secondMax = array[i];
+//     }
+// }
+
+// console.log("Second largest element:", secondMax);
+
+
+
+
+
+// let arrayMin = [68,78,88,62,45,74,37,9,39,74,51,96,101]
+// let minNeed = 100;
+
+// for(let i=0;i<=arrayMin.length-1;i++){
+//     if(arrayMin[i] <minNeed){
+//         minNeed=arrayMin[i]
+//     }
+// }
+// //  let secondLargest = maxNeed;
+// //  console.log(secondLargest)
+// console.log(minNeed)
+
+
+
+
+
+// let array = [2, 4, 5,78,68,77,95,69,45,71]
+// let total =0;
+// for (let i=0;i<=array.length-1;i++) {
+//     // console.log(array[i])
+//     if(array[i]%2==1){
+//         // console.log(array[i])
+//         total+=array[i]
+//     }
+// }
+// console.log(total)
+
+
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// let newOne = fruits.toString();
+// console.log(newOne)
+
+
+
+// let arr = ['barcelona'];
+// let newArr = arr.push('messi');
+// console.log(newArr);
+
+//  // !!!!!!@#$%^&*()
+
+// let first=['home', 'house'];
+// const middle =['building', 'temple']
+// const last = ['hut', 'castle']
+
+// const firstAndLast =middle.concat(last,first)
+// console.log(firstAndLast);
+// // console.log(first);
+// // console.log(last)
+
+
+
+// let a='digha'
+// let b='jabo'
+// console.log(a + " " + b)
+
+
+
+
+
+// let x = 1235e-5
+// console.log(x)
+
+
+// let array = [45,85,79,83,75,72,124,245,324,83];
+// let maximum = 10;
+// for (let i=0;i<=array.length-1;i++){
+//     if(array[i] >maximum){
+//         maximum =array[i];
+//     }
+// }
+// console.log(maximum)
+
+
+
+
+
+
+
+
+
+
+// let array = [68,78,88,62,45,74,37,9,77,86,59,88,86,79,82,39,74,51,96,101]
+// let needMax=10;
+// for (let i=0; i<=array.length; i++){
+//     // console.log(array[i]);
+//     if(array[i] >needMax){
+//         needMax=array[i]
+//     }
+//     // console.log(needMax);
+// }
+// console.log(needMax)
+
+
+
+
+
+// string reverse 
+
+let str = "loveBabbar";
+let newString='';
+for (let i = str.length - 1; i >= 0; i--){
+    newString+=str[i]
+}
+console.log(newString);
+// console.log("string is",str)
+
+
+
+
+
