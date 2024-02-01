@@ -556,15 +556,74 @@
 
 
 
-// string reverse 
+    // // string reverse 
 
-let str = "loveBabbar";
-let newString='';
-for (let i = str.length - 1; i >= 0; i--){
-    newString+=str[i]
-}
-console.log(newString);
-// console.log("string is",str)
+// let str = "loveBabbar";
+// let newString='';
+// for (let i = str.length - 1; i >= 0; i--){
+//     newString+=str[i]
+// }    
+// console.log(newString);
+// // console.log("string is",str)
+
+
+
+
+
+
+
+
+// // reversed array
+
+// let arr=[2,4,6,8,9,5,6]
+//  let reversedArray = [];
+//     for (let i = arr.length - 1; i >= 0; i--) {
+//         reversedArray+=(arr[i]);
+//     }
+    
+//     console.log(reversedArray)
+
+
+
+
+
+
+
+
+
+// class Solution{
+//     public:
+//     void segregateElements(int arr[],int n)
+//     {
+    	
+//         // Create an empty array to store result
+//         int temp[n];
+     
+//         // Traversal array and store +ve element in
+//         // temp array
+//         int j = 0; // index of temp
+//         for (int i = 0; i < n ; i++)
+//             if (arr[i] >= 0 )
+//                 temp[j++] = arr[i];
+     
+//         // If array contains all positive or all negative.
+//         if (j == n || j == 0)
+//             return;
+     
+//         // Store -ve element in temp array
+//         for (int i = 0 ; i < n ; i++)
+//             if (arr[i] < 0)
+//                 temp[j++] = arr[i];
+     
+//         // Copy contents of temp[] to arr[]
+//         memcpy(arr, temp, sizeof(temp));
+        
+//     }
+// };
+
+
+
+
 
 
 
