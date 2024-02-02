@@ -153,7 +153,7 @@
 // console.log(end)
 
 
-// l
+
 
 
 
@@ -570,9 +570,6 @@
 
 
 
-
-
-
 // // reversed array
 
 // let arr=[2,4,6,8,9,5,6]
@@ -622,6 +619,137 @@
 // };
 
 
+
+
+
+
+
+
+
+
+
+// function findDuplicates(N, a) {
+//     const result = [];
+    
+//     // Iterate through the array
+//     for (let i = 0; i < N; i++) {
+//         const index = Math.abs(a[i]); // Get the index corresponding to the current element
+//         // If the element at index is positive, make it negative to mark it as visited
+//         if (a[index] >= 0) {
+//             a[index] = -a[index];
+//         } else { // If it's already negative, it means it's a duplicate
+//             result.push(index);
+//         }
+//     }
+    
+//     // If no duplicates found, return [-1]
+//     if (result.length === 0) {
+//         return [-1];
+//     }
+    
+//     // Sort and return the duplicates
+//     result.sort((a, b) => a - b);
+//     return result;
+// }
+
+// // Example usage:
+// const N = 4;
+// const a = [0, 3, 1, 2];
+// console.log(findDuplicates(N, a)); // Output: [-1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function findRepeatingElements(arr) {
+//     const repeatingElements = [];
+  
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] < 0) {
+//         // Already marked negative, skip to avoid infinite loops
+//         continue;
+//       }
+  
+//       const index = arr[i];
+//       arr[i] = -arr[i]; // Mark first occurrence as negative
+  
+//       outerLoop:
+//       while (true) {
+//         const nextIndex = Math.abs(arr[index]);
+//         if (arr[nextIndex] < 0) {
+//           // Found a repeating element
+//           repeatingElements.push(nextIndex);
+//           arr[nextIndex] = -arr[nextIndex]; // Mark as positive for output
+//           break outerLoop; // Exit the inner loop
+//         } else {
+//           // Continue to the next index
+//           index = nextIndex;
+//         }
+//       }
+//     }
+  
+//     return repeatingElements.length > 0 ? repeatingElements.sort((a, b) => a - b) : [-1];
+//   }
+  
+
+
+
+
+
+
+
+// Given an array, rotate the array by one position in clock-wise direction.
+ 
+
+// Example 1:
+
+// Input:
+// N = 5
+// A[] = {1, 2, 3, 4, 5}
+// Output:
+// 5 1 2 3 4
+
+
+
+
+
+// class Solution{
+//     rotate(arr,n){
+//         //code here
+//         let popElement=arr.pop()
+//         let finalElement=[]
+//         // let final=[]
+//         finalElement[0]=popElement
+//         // console.log("popelement  is",popElement)
+        
+        
+//         for (let i =0;i<=arr.length-1;i++){
+//             // popElement+=arr[i]
+//             finalElement.push(arr[i])
+//             // opti.push(last)
+//         }
+//         // console.log(finalElement);
+//         // console.log(popElement);
+        
+        
+//         return finalElement;
+        
+//         // console.log()
+//         // final =arr[0]+last
+//         // let final = popElement + finalElement;
+//         // return final
+        
+//         // return last
+//     }
+// }
 
 
 
