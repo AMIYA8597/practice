@@ -190,17 +190,131 @@
 
 
 
-let arr = [0,3,1,2,0,7,9,6,7,4,0,9,8,0,6]
-for (let i=0;i<arr.length;i++){
-    if(arr[i]==7){
-        continue;
-    }
-    console.log(arr[i])
-}
+// let arr = [0,3,1,2,0,7,9,6,7,4,0,9,8,0,6]
+// for (let i=0;i<arr.length;i++){
+//     if(arr[i]==7){
+//         continue;
+//     }
+//     console.log(arr[i])
+// }
 
 
 
 
+
+
+
+     //your code here
+        // let arr=[];
+        // arr=a.sort()
+        // console.log("arr is",arr)
+        // return a
+    //     let arr =[];
+    //     // arr=a.sort();
+    //     // console.log("arr is",arr);
+    //     // return arr;
+    //   for(let i=0;i<a.length;i++){
+    //       if(a[i]<0){
+    //           continue
+    //       }
+    //       arr+=a[i]
+    // //   console.log("arr",a[i]);
+    // //   return a[i]
+    //   }
+    // //   console.log(arr)
+    //   return arr;
+
+
+
+
+
+//   var helloWorld = [1,2,3,4,3, 1, 2];
+//   var doubleValue = [];
+//   for (let i = 0; i < helloWorld.length; i++) {
+//     for (let x = i + 1; x < helloWorld.length; x++) {
+//       if (helloWorld[i] === helloWorld[x] && i !== x) {
+//         doubleValue.push(helloWorld[x]);
+//       }
+//     }
+//   }
+//   console.log(doubleValue);
+
+
+
+
+     //your code here
+        // let arr=[];
+        // arr=a.sort()
+        // console.log("arr is",arr)
+        // return a
+    //     let arr =[];
+    //     // arr=a.sort();
+    //     // console.log("arr is",arr);
+    //     // return arr;
+    //   for(let i=0;i<a.length;i++){
+    //       if(a[i]<0){
+    //           continue
+    //       }
+    //       arr+=a[i]
+    // //   console.log("arr",a[i]);
+    // //   return a[i]
+    //   }
+    // //   console.log(arr)
+    //   return arr;
+    
+    
+    
+    
+    
+    
+    
+//      let counts = {}
+
+//  for(let i =0; i < a.length; i++){ 
+//      if (counts[a[i]]){
+//      counts[a[i]] += 1
+//      } else {
+//      counts[a[i]] = 1
+//      }
+//     }  
+//     for (let prop in counts){
+//         if (counts[prop] >= 2){
+//             console.log(prop + " counted: " + counts[prop] + " times.")
+//         }
+//     }
+//   console.log(counts)
+
+
+
+
+//         for (let prop in newArr){
+//         if (newArr[prop] >= 2){
+//             console.log(prop + " counted: " + newArr[prop] + " times.")
+//         }
+//     }
+//   console.log(newArr)
+  
+//   return newArr
+
+
+
+
+
+
+
+
+
+
+
+// let arr= [1,2,3,4,5,6,7];
+// let newArr=[];
+// for (let i=0;i<arr.length;i++){
+//     if(arr[i]==5){
+//         console.log("found 5")
+//         break;
+//     }
+//     // console.log(arr[i])
+// }
 
 
 
