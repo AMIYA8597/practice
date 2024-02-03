@@ -1,6 +1,6 @@
 //    create the polyfil fo map 
-   
-   // //Array.map( (num,i,arr)=> { } )
+
+// //Array.map( (num,i,arr)=> { } )
 
 // Array.prototype.myMap=function(callBack){
 //     let newArr=[];
@@ -25,7 +25,7 @@
 
 
 
- 
+
 // // create prototype for filter 
 // Array.prototype.filter =function (numbersOfArray){
 // let newArr=[];
@@ -127,7 +127,7 @@
 //     { name: 'Sam', grade: 65 },
 //     { name: 'Katie', grade: 90 }
 //   ];
-  
+
 //   const studentGrades = students.filter(student => student.grade >= 90);
 //   return studentGrades;
 
@@ -173,15 +173,15 @@
 
 
 const students = [
-    { name: 'Quincy', grade: 76, rollNo:2 } ,
-    { name: 'Jason', grade: 74, rollNo:3 },
-    { name: 'Alexis', grade: 80, rollNo:4},
-    { name: 'Sam', grade: 50, rollNo:5 },
-    { name: 'Katie', grade: 76, rollNo:1 }
-  ];
+  { name: 'Quincy', grade: 76, rollNo: 2 },
+  { name: 'Jason', grade: 74, rollNo: 3 },
+  { name: 'Alexis', grade: 80, rollNo: 4 },
+  { name: 'Sam', grade: 50, rollNo: 5 },
+  { name: 'Katie', grade: 76, rollNo: 1 }
+];
 
-  
-  // // here i am using for loop 
+
+// // here i am using for loop 
 
 //   let result =[];
 //   for(let i=0;i<students.length;i++){
@@ -210,13 +210,13 @@ const students = [
 //  console.log("Good Students are \n",goodStudents);
 
 
-  //   // Q: morethan 75 marks and roll number >2
+//   // Q: morethan 75 marks and roll number >2
 //   let marksAndRoll= students.filter( ( student )=>student.grade >=75 && student.rollNo > 2)
 //   console.log("marks and roll number filter",marksAndRoll);
 
-  // // //Q: sum of marks of all students;
+// // //Q: sum of marks of all students;
 
-  //here i am using for loop below code will give us the total sum of grades of all students
+//here i am using for loop below code will give us the total sum of grades of all students
 
 //   let totalMarks = 0;
 //   for(let i=0;i<students.length;i++){
@@ -238,15 +238,79 @@ const students = [
 //  let morethan70Names = students.filter( (student) => student.grade >70).map((student =>student.name));
 //  console.log("only student who scores more than 70",morethan70Names);
 
-// // Q : Return total marks with students with marks grater than 90
-    // // after 20 marks have been added to those students whose score was less than 69
+// // // Q : Return total marks with students with marks grater than 90
+//     // // after 20 marks have been added to those students whose score was less than 69
 
-    let studentMarks = students.map( (student) =>{
-        if(student.grade < 69){
-            student.grade += 20;     
-        }
-        return student;
-    }).filter( (student) =>student.grade > 69)
-    .reduce((accumolator, currentValue) =>  accumolator + currentValue.grade ,0);
+//     let studentMarks = students.map( (student) =>{
+//         if(student.grade < 69){
+//             student.grade += 20;     
+//         }
+//         return student;
+//     }).filter( (student) =>student.grade > 69)
+//     .reduce((accumolator, currentValue) =>  accumolator + currentValue.grade ,0);
 
-    console.log("now students marks " , studentMarks);
+//     console.log("now students marks " , studentMarks);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // Q: print second(2nd) largest number
+
+
+// function secondLargest(arr) {
+//   let uniqueArr = Array.from(new Set(arr));  // timecomplexity O(n)
+
+//   uniqueArr.sort((a, b) => {      // O(n log n)
+//     return b - a;
+//   })
+
+//   if (uniqueArr >= 2) {
+//     return uniqueArr[1];
+//   } else {
+//     // return 'The array does not contain enough numbers';
+//     return -1;
+//   }
+//   // console.log("unique array is", uniqueArr)
+// }
+
+// console.log('second largest is ', secondLargest([15, 48, 39, 23, 15, 48, 39]));
+
+// // so this algorithm is O(n log n ) time complexity ;
+
+
+
+
+ 
+ // // optimism update Approach 
+
+ function secondLargestOptimized (arr) {
+  let largest =-1;
+  let secondLargest = -1;
+  for(let i=0;i< arr.length;i++) {
+
+    if(arr[i]>largest){
+      secondLargest = largest;
+      largest= arr[i];
+    }
+    else if(arr[i]!= largest && arr[i] > secondLargest) {
+      secondLargest= arr[i];
+    }
+  }
+
+  return secondLargest;
+ }
+
+//  console.log(  "second largest",secondLargestOptimized([3,5,2,6,4,7,9,1]));
+ console.log(  "second largest",secondLargestOptimized([2,5,2,5,1]));

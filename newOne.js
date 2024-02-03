@@ -166,8 +166,6 @@
 
 
 
-
-
 // let arr = [1,2,4,5,7,6,8,3,11]
 // for(let i = 0; i<arr.length;i++){
 //     if(arr[i]==3){
