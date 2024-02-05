@@ -172,13 +172,13 @@
 
 
 
-const students = [
-  { name: 'Quincy', grade: 76, rollNo: 2 },
-  { name: 'Jason', grade: 74, rollNo: 3 },
-  { name: 'Alexis', grade: 80, rollNo: 4 },
-  { name: 'Sam', grade: 50, rollNo: 5 },
-  { name: 'Katie', grade: 76, rollNo: 1 }
-];
+// const students = [
+//   { name: 'Quincy', grade: 76, rollNo: 2 },
+//   { name: 'Jason', grade: 74, rollNo: 3 },
+//   { name: 'Alexis', grade: 80, rollNo: 4 },
+//   { name: 'Sam', grade: 50, rollNo: 5 },
+//   { name: 'Katie', grade: 76, rollNo: 1 }
+// ];
 
 
 // // here i am using for loop 
@@ -314,3 +314,44 @@ const students = [
 
 //  console.log(  "second largest",secondLargestOptimized([3,5,2,6,4,7,9,1]));
  console.log(  "second largest",secondLargestOptimized([2,5,2,5,1]));
+
+
+
+
+//  function commonElements(arr1, arr2, arr3, n1, n2, n3) {
+//   let result = [];
+  
+//   for (let i = 0; i < n1; i++) {
+//       for (let j = 0; j < n2; j++) {
+//           for (let k = 0; k < n3; k++) {
+//               if (arr1[i] === arr2[j] && arr2[j] === arr3[k]) {
+//                   // Check if the current element is not already in the result array
+//                   if (!result.includes(arr1[i])) {
+//                       result.push(arr1[i]);
+//                   }
+//               }
+//               // Since the arrays are sorted, if the current element in arr3
+//               // is greater than the current element in arr2, break the loop
+//               if (arr3[k] > arr2[j]) {
+//                   break;
+//               }
+//           }
+//           // Since the arrays are sorted, if the current element in arr2
+//           // is greater than the current element in arr1, break the loop
+//           if (arr2[j] > arr1[i]) {
+//               break;
+//           }
+//       }
+//   }
+  
+//   return result;
+// }
+
+// // Example usage:
+// let A = [1, 5, 10, 20, 40, 80];
+// let B = [6, 7, 20, 80, 100];
+// let C = [3, 4, 15, 20, 30, 70, 80, 120];
+// let n1 = A.length;
+// let n2 = B.length;
+// let n3 = C.length;
+// console.log(commonElements(A, B, C, n1, n2, n3)); // Output: [20, 80]

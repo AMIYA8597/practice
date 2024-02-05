@@ -306,31 +306,65 @@
 
 // let arr= [1,2,3,4,5,6,7];
 // let newArr=[];
-// for (let i=0;i<arr.length;i++){
-//     if(arr[i]==5){
-//         console.log("found 5")
-//         break;
+    // for (let i=0;i<arr.length;i++){
+    //     if(arr[i]==5){
+    //         console.log("found 5")
+    //         break;
+    //     }
+    //     // console.log(arr[i])
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function printRightTriangle(height) {
+
+//     for (let i = 0; i < height; i++) {
+
+//         let row = '';
+
+//         for (let j = 0; j <= i; j++) {
+
+//             row += '* ';
+
+//         }
+
+//         console.log(row);
+
 //     }
-//     // console.log(arr[i])
+
 // }
 
+// printRightTriangle(5);
 
 
+//// output is    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// * 
+// * * 
+// * * * 
+// * * * * 
+// * * * * * 

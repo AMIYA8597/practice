@@ -558,6 +558,41 @@ class Solution{
 
 
 
+// let duplicates = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i + 1; j < arr.length; j++) {
+//     if (arr[i] === arr[j] && duplicates.indexOf(arr[i]) === -1) {
+//       // Add the duplicate element only once
+//       duplicates.push(arr[i]);
+//     }
+//   }
+// }
+
+// console.log(duplicates); // Output: [2, 1, 3]
+
+
+
+
+
+
+
+
+// let arr = [3, 1, 2, 2, 1, 2, 3, 3];
+
+// const duplicates = arr.map((value, index) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === value && i !== index) {
+//       // Duplicate found
+//       return value;
+//     }
+//   }
+// });
+
+// // Remove any undefined values (non-duplicates)
+// const filteredDuplicates = duplicates.filter(value => value !== undefined);
+
+// console.log(filteredDuplicates); // Output: [2, 1, 3, 3]
 
 
 
@@ -569,6 +604,203 @@ class Solution{
 
 
 
+// let arr = [3, 1, 2, 2, 1, 2, 3, 3];
+
+// const duplicates = arr.map((value, index) => {
+//   if (arr.indexOf(value) !== index) {
+//     // Element is not at its first occurrence, so it's a duplicate
+//     return value;
+//   }
+// });
+
+// // Filter out any undefined values (non-duplicates)
+// const filteredDuplicates = duplicates.filter(value => value !== undefined);
+
+// console.log(filteredDuplicates); // Output: [2, 1, 3, 3]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Given an array arr of size N and an element k. The task is to find the count of elements in the array that appear more than n/k times.
+
+// Example 1:
+
+// Input:
+// N = 8
+// arr = [3,1,2,2,1,2,3,3]
+// k = 4
+// Output: 
+// 2
+// Explanation: 
+// In the given array, 3 and 2 are the only elements that appears more than n/k times.
+
+
+
+
+
+// function countElementsGreaterThanNK(arr, k) {
+//     const n = arr.length;
+//     const hashMap = {};
+
+//     // Count frequency of each element
+//     for (let i = 0; i < n; i++) {
+//         if (hashMap[arr[i]]) {
+//             hashMap[arr[i]]++;
+//         } else {
+//             hashMap[arr[i]] = 1;
+//         }
+//     }
+
+//     // Count elements appearing more than n/k times
+//     let count = 0;
+//     for (let key in hashMap) {
+//         if (hashMap.hasOwnProperty(key)) {
+//             if (hashMap[key] > n / k) {
+//                 count++;
+//             }
+//         }
+//     }
+
+//     return count;
+// }
+
+// // Example usage:
+// const arr = [3, 1, 2, 2, 1, 2, 3, 3];
+// const k = 4;
+// console.log(countElementsGreaterThanNK(arr, k)); // Output: 2
+
+
+
+
+
+// function countOccurences(arr, n, k) {
+//     // Create an empty object to store the count of each element
+//     const countMap = {};
+    
+//     // Initialize a count to keep track of elements appearing more than n/k times
+//     let count = 0;
+    
+//     // Loop through the input array
+//     for (let i = 0; i < n; i++) {
+//       const element = arr[i];
+      
+//       // Update the count of the current element in the map
+//       countMap[element] = (countMap[element] || 0) + 1;
+//     }
+  
+//     // Loop through the count map
+//     for (const [element, frequency] of Object.entries(countMap)) {
+//       // If the frequency of the current element is greater than n/k
+//       if (frequency > Math.floor(n / k)) {
+//         // Increment the count
+//         count++;
+//       }
+//     }
+  
+//     // Return the count of elements appearing more than n/k times
+//     return count;
+//   }
+  
+//   // Example usage:
+//   const N = 8;
+//   const arr = [3, 1, 2, 2, 1, 2, 3, 3];
+//   const k = 4;
+//   const result = countOccurences(arr, N, k);
+//   console.log(result); // Output: 2
+  
+
+
+
+
+
+
+
+
+// let arr = [3, 1, 2, 2, 1, 2, 3, 3];
+
+// let count = {};
+
+// arr.forEach(element => {
+//   count[element] = (count[element] || 0) + 1;
+// });
+
+// console.log(count)
+
+
+
+
+
+// let arr = [3, 1, 2, 2, 1, 2, 3, 3];
+
+// let count = {};
+
+// arr.forEach((element) => {
+//   count[element] = (count[element] || 0) + 1;
+// });
+
+// console.log(count)
+
+
+
+// This line increments the count of the current element in the count object. 
+// It does this by using the current element as a key in the count object. 
+// If the element doesn't exist in the count object yet, 
+// it initializes its count to 0 using the logical OR operator (||), then adds 1 to it.
+
+
+
+
+
+
+// const arr = [3, 1, 2, 2, 1, 2, 3, 3];
+
+// const result = arr.map((element, index) => {
+//     return `Element: ${ element },Index: ${ index } `;
+// });
+// console.log( "result  is",result)
+
+
+
+
+
+
+// class Solution {
+//     countOccurence(arr, n, k) {
+//         let mp = new Map();
+//         let a = Math.floor(n/k);
+
+//         for(let i = 0; i < n; i++) {
+//             if(mp.has(arr[i])) {
+//                 mp.set(arr[i], mp.get(arr[i]) + 1);
+//             } else {
+//                 mp.set(arr[i], 1);
+//             }
+//         }
+
+//         let count = 0;
+//         for(let [key, value] of mp.entries()) {
+//             if(value > a) {
+//                 count++;
+//             }
+//         }
+
+//         return count;
+//     }
+// }
 
 
 
