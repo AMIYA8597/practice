@@ -441,3 +441,136 @@ class Solution{
 // //     return elementCount;
 
 
+
+
+
+
+
+
+
+
+
+
+
+// Given an array of N integers, and an integer K, find the number of pairs of elements in the array whose sum is equal to K.
+
+
+// Example 1:
+
+// Input:
+// N = 4, K = 6
+// arr[] = {1, 5, 7, 1}
+// Output: 2
+// Explanation: 
+// arr[0] + arr[1] = 1 + 5 = 6 
+// and arr[1] + arr[3] = 5 + 1 = 6.
+
+
+// function countPairsWithSum(arr, N, K) {
+//     let count = 0;
+
+//     // Iterate through each element in the array
+//     for (let i = 0; i < N - 1; i++) {
+//         for (let j = i + 1; j < N; j++) {
+//             // Check if the sum of the current pair is equal to K
+//             if (arr[i] + arr[j] === K) {
+//                 count++;
+//             }
+//         }
+//     }
+
+//     return count;
+// }
+
+// // Example usage:
+// const N = 4;
+// const K = 6;
+// const arr = [1, 5, 7, 1];
+
+// const result = countPairsWithSum(arr, N, K);
+// console.log("Output:", result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Given three arrays sorted in increasing order. Find the elements that are common in all three arrays.
+// Note: can you take care of the duplicates without using any additional Data Structure?
+
+// Example 1:
+
+// Input:
+// n1 = 6; A = {1, 5, 10, 20, 40, 80}
+// n2 = 5; B = {6, 7, 20, 80, 100}
+// n3 = 8; C = {3, 4, 15, 20, 30, 70, 80, 120}
+// Output: 20 80
+// Explanation: 20 and 80 are the only
+// common elements in A, B and C.
+
+
+
+
+// function findCommonElements(A, B, C, n1, n2, n3) {
+//     let i = 0, j = 0, k = 0;
+
+//     // Iterate until any of the arrays reaches its end
+//     while (i < n1 && j < n2 && k < n3) {
+//         // If the current elements in all three arrays are equal, it is a common element
+//         if (A[i] === B[j] && B[j] === C[k]) {
+//             console.log(A[i]);
+//             i++;
+//             j++;
+//             k++;
+//         } else {
+//             // Move the pointer of the array with the smallest element
+//             if (A[i] < B[j] || A[i] < C[k]) {
+//                 i++;
+//             } else if (B[j] < A[i] || B[j] < C[k]) {
+//                 j++;
+//             } else {
+//                 k++;
+//             }
+//         }
+//     }
+// }
+
+// // Example usage:
+// const n1 = 6;
+// const A = [1, 5, 10, 20, 40, 80];
+
+// const n2 = 5;
+// const B = [6, 7, 20, 80, 100];
+
+// const n3 = 8;
+// const C = [3, 4, 15, 20, 30, 70, 80, 120];
+
+// console.log("Output:");
+// findCommonElements(A, B, C, n1, n2, n3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -127,3 +127,34 @@ console.log("index of word 'World' is ",indexPos)
 
 
 
+
+
+
+
+// // // // // ///// truncate using string
+
+// function truncate(str , maxLength) {
+//     if(str.length > maxLength) {
+//         return str.slice (0 , maxLength ) + "..."
+//     }
+//     else return str
+// }
+
+// console.log(truncate("hello i am amiya", 9));
+
+
+    // // check if it is palindrome 
+
+    let palindrome = function (str) {
+
+     // if(str<0) return false
+    //     return str === +str.toString().split("").reverse().join("")   
+
+        
+        return str < 0 ? false : str === +str.toString().split("").reverse().join("")
+         // 121=> "121" => ["1","2","1"] => ["1","2","1"] => "121"
+    }
+
+    let res = palindrome(121);
+
+    console.log("palindrome is ",res);

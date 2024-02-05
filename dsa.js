@@ -26,3 +26,10 @@
 // const N = 4;
 // const a = [0, 3, 1, 2];
 // console.log(findDuplicates(N, a)); // Output: [-1]
+
+
+
+
+
+
+
