@@ -806,3 +806,472 @@ class Solution{
 
 
 
+
+
+
+// function countOccurence(arr, n, k) {
+//     let result = {};
+    
+//     for (let i = 0; i < arr.length; i++) {
+//         let newArr = arr[i];
+//         if (!result[newArr]) {
+//             result[newArr] = 1;
+//         } else {
+//             result[newArr] += 1;
+//         }
+//     }
+    
+//     let threshold = n / k;
+//     let count = 0;
+    
+//     for (let key in result) {
+//         if (result[key] > threshold) {
+//             count++;
+//         }
+//     }
+    
+//     return count;
+// }
+
+// // Example usage:
+// let arr = [3, 1, 2, 2, 1, 2, 3, 3];
+// let n = 8;
+// let k = 4;
+// console.log(countOccurence(arr, n, k)); // Output: 2
+
+
+
+
+
+// class Solution
+// {
+//     //Function to find all elements in array that appear more than n/k times.
+//     countOccurence(arr, n, k)
+//     {
+//         //your code here
+        
+//         let result = {};
+        
+//         for (let i=0;i<arr.length; i++){
+//             let newArr = arr[i];
+//             if(!result[newArr]){
+//                 result[newArr] = 1;
+//             }
+//             else {
+//                 result[newArr]+=1
+//             }
+//         }
+        
+//         // return result
+        
+//         let divide = Math.floor(n/k);
+        
+//         let totalCount = 0;
+        
+//         // let newValue = arr.map((element)=> {
+//         //     if(element > divide){
+//         //         totalCount ++
+//         //     };
+//         // })
+        
+//         // return newValue
+        
+//             for (let key in result) {
+//         if (result[key] > divide) {
+//             totalCount++;
+//         }
+//     }
+    
+//     return totalCount;
+//     }
+// }
+
+
+
+
+
+// function countOccurence(arr, n, k) {
+//     // Use a Map to store element counts efficiently
+//     const counts = new Map();
+   
+//     // Count occurrences using a loop
+//     for (const element of arr) {
+//       counts.set(element, (counts.get(element) || 0) + 1);
+//     }
+   
+//     // Calculate the threshold for "more than n/k times"
+//     const threshold = n / k;
+   
+//     // Use map to filter elements and count qualifying ones
+//     const qualifyingCount = arr.map((element) => {
+//       return counts.get(element) > threshold ? 1 : 0;
+//     }).reduce((sum, count) => sum + count, 0);
+   
+//     return qualifyingCount;
+//    }
+   
+
+
+
+
+
+
+
+// Given two arrays: a1[0..n-1] of size n and a2[0..m-1] of size m. Task is to check whether a2[] is a subset of a1[] or not. Both the arrays can be sorted or unsorted. There can be duplicate elements.
+ 
+
+// Example 1:
+
+// Input:
+// a1[] = {11, 7, 1, 13, 21, 3, 7, 3}
+// a2[] = {11, 3, 7, 1, 7}
+// Output:
+// Yes
+// Explanation:
+// a2[] is a subset of a1[]
+
+
+
+
+
+
+
+
+
+
+// function isSubset(a1, a2, n, m) {
+//     // Sort the arrays
+//     let sortA1 = a1.sort((a, b) => a - b);
+//     let sortA2 = a2.sort((a, b) => a - b);
+
+//     // Count frequencies of elements in both arrays
+//     let arrElement = {};
+//     let arrElement2 = {};
+
+//     for (let i = 0; i < sortA1.length; i++) {
+//         let firstElement = sortA1[i];
+//         if (!arrElement[firstElement]) {
+//             arrElement[firstElement] = 1;
+//         } else {
+//             arrElement[firstElement]++;
+//         }
+//     }
+
+//     for (let j = 0; j < sortA2.length; j++) {
+//         let secondElement = sortA2[j];
+//         if (!arrElement2[secondElement]) {
+//             arrElement2[secondElement] = 1;
+//         } else {
+//             arrElement2[secondElement]++;
+//         }
+//     }
+
+//     // Compare the frequency objects
+//     for (let key in arrElement2) {
+//         if (!(key in arrElement) || arrElement2[key] > arrElement[key]) {
+//             return "No";
+//         }
+//     }
+
+//     return "Yes";
+// }
+
+// // Example usage:
+// let a1 = [11, 7, 1, 13, 21, 3, 7, 3];
+// let a2 = [11, 3, 7, 1, 7];
+// let n = a1.length;
+// let m = a2.length;
+// console.log(isSubset(a1, a2, n, m)); // Output: Yes
+
+
+
+
+
+
+// function isSubset(a1, a2) {
+//     // Create a frequency map for elements in a1
+//     let frequencyMap = {};
+//     for (let i = 0; i < a1.length; i++) {
+//         let element = a1[i];
+//         if (!frequencyMap[element]) {
+//             frequencyMap[element] = 1;
+//         } else {
+//             frequencyMap[element]++;
+//         }
+//     }
+
+//     // Check if all elements of a2 are present in a1
+//     for (let i = 0; i < a2.length; i++) {
+//         let element = a2[i];
+//         // If the element is not present or its frequency in a1 is zero,
+//         // a2 is not a subset of a1
+//         if (!frequencyMap[element] || frequencyMap[element] === 0) {
+//             return "No";
+//         } else {
+//             frequencyMap[element]--;
+//         }
+//     }
+
+//     // If all elements of a2 are found in a1, a2 is a subset of a1
+//     return "Yes";
+// }
+
+// // Example usage:
+// let a1 = [11, 7, 1, 13, 21, 3, 7, 3];
+// let a2 = [11, 3, 7, 1, 7];
+// console.log(isSubset(a1, a2)); // Output: Yes
+
+
+
+
+
+
+
+
+
+// isSubset(a1, a2, n, m){
+//     //code here
+//     let arrElement = {};
+    
+//     for(let i=0; i<a1.length; i++){
+//         let firstElement = a1[i];
+//         if(!arrElement[firstElement]){
+//             arrElement[firstElement] =1;
+//         } else {
+//             arrElement[firstElement] +1;
+//         }
+//     }
+//     // console.log("first array element is ",arrElement)
+    
+    
+//     for(let j =0; j<a2.length; j++) {
+//         let secondElement = a2[j]
+        
+//         if (!arrElement[secondElement] )
+//         return "No"
+//     }
+//     // else {
+//     //     return "yes"
+//     // }
+//     return "Yes"
+// }
+
+
+
+
+
+
+
+// Given an array A[ ] of positive integers of size N, where each value represents the number of chocolates in a packet. Each packet can have a variable number of chocolates. There are M students, the task is to distribute chocolate packets among M students such that :
+// 1. Each student gets exactly one packet.
+// 2. The difference between maximum number of chocolates given to a student and minimum number of chocolates given to a student is minimum.
+
+// Example 1:
+
+// Input:
+// N = 8, M = 5
+// A = {3, 4, 1, 9, 56, 7, 9, 12}
+// Output: 6
+// Explanation: The minimum difference between maximum chocolates and minimum chocolates is 9 - 3 = 6 by choosing following M packets :{3, 4, 9, 7, 9}.
+
+
+// solve in javascript without using method
+
+
+
+// function minDifferenceBetweenPackets(N, M, A) {
+//     if (M > N) {
+//         return -1; // Not enough packets to distribute to each student
+//     }
+
+//     // Sort the array in ascending order
+//     A.sort((a, b) => a - b);
+
+//     let minDifference = Infinity;
+
+//     // Find the minimum difference by iterating through the array
+//     for (let i = 0; i + M - 1 < N; i++) {
+//         let difference = A[i + M - 1] - A[i];
+//         if (difference < minDifference) {
+//             minDifference = difference;
+//         }
+//     }
+
+//     return minDifference;
+// }
+
+// // Example usage:
+// const N = 8;
+// const M = 5;
+// const A = [3, 4, 1, 9, 56, 7, 9, 12];
+// console.log(minDifferenceBetweenPackets(N, M, A)); // Output: 6
+
+
+
+
+
+
+
+// class Solution{
+//     isSubset(a1, a2, n, m){
+//         //code here
+//         let sortA1 = a1.sort( (a , b) => a - b);
+//         let sortA2 = a2.sort( (a , b) => a - b);
+//         // console.log("sortA1 is", sortA1);
+//         // console.log("sortA2 is" ,sortA2)
+//         let arrElement = {};
+//         let arrElement2 = {};
+        
+//         for(let i=0; i<sortA1.length; i++){
+//             let firstElement = sortA1[i];
+//             if(!arrElement[firstElement]){
+//                 arrElement[firstElement] = 1;
+//             } else {
+//                 arrElement[firstElement] ++;
+//             }
+//         }
+        
+//         // console.log("first array element is ",arrElement)
+        
+        
+//         for(let j =0; j<sortA2.length; j++) {
+//             let secondElement = sortA2[j]
+            
+//             if (!arrElement2[secondElement] ){
+//                 arrElement2[secondElement] =1;
+//             }
+//             else {
+//                 arrElement2[secondElement] ++;
+//             }
+        
+//         } 
+        
+//                 // console.log("second array element is ",arrElement2)
+
+        
+        
+//     for (let key in arrElement2) {
+//         if (!(key in arrElement) ) {
+//             return "No";
+//         }
+//     }
+
+//     return "Yes"
+        
+        
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+// Given an array of integers (A[])  and a number x, find the smallest subarray with sum greater than the given value. If such a subarray do not exist return 0 in that case.
+
+// Example 1:
+
+// Input:
+// A[] = {1, 4, 45, 6, 0, 19}
+// x  =  51
+// Output: 3
+// Explanation:
+// Minimum length subarray is 
+// {4, 45, 6}
+
+
+
+
+// function smallestSubarrayWithSumGreaterThanX(arr, x) {
+//     let minLen = arr.length + 1;
+
+//     // Iterate through all possible starting points of the subarray
+//     for (let start = 0; start < arr.length; start++) {
+//         let currSum = arr[start];
+
+//         // If the current element itself is greater than x, return 1
+//         if (currSum > x) {
+//             return 1;
+//         }
+
+//         // Try all subarrays starting from 'start'
+//         for (let end = start + 1; end < arr.length; end++) {
+//             // Add elements of the current subarray
+//             currSum += arr[end];
+
+//             // If the sum becomes greater than x and the length of this subarray is smaller
+//             // than the current smallest subarray length, update minLen
+//             if (currSum > x && (end - start + 1) < minLen) {
+//                 minLen = (end - start + 1);
+//             }
+//         }
+//     }
+
+//     // If minLen is still the initial value, no subarray with sum greater than x was found
+//     return minLen === arr.length + 1 ? 0 : minLen;
+// }
+
+// // Example usage:
+// const arr = [1, 4, 45, 6, 0, 19];
+// const x = 51;
+// console.log(smallestSubarrayWithSumGreaterThanX(arr, x)); // Output: 3
+
+
+
+
+
+let employees = [
+
+    {
+  
+      id: 111,
+  
+      name: "Chelsea Foster",
+  
+      years: 7,
+  
+    },
+  
+    {
+  
+      id: 102,
+  
+      name: "Aggie Sparling",
+  
+      years: 13,
+  
+    },
+  
+    {
+  
+      id: 123,
+  
+      name: "Timmy Matthews",
+  
+      years: 23,
+  
+    },
+  
+    {
+  
+      id: 119,
+  
+      name: "Emmet Foster",
+  
+      years: 22,
+  
+    }
+  
+  ];
+  
+  let employeesTotalYears = employees.reduce((accu , index) =>{
+    return accu + employees.years
+  }, 0)
+
+
+
