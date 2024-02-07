@@ -95,62 +95,63 @@
 
 
 
-class Solution{
-    segregateElements(arr,n){
-        let posArr=[];
-        let negArr=[];
-        for (let i=0;i<=arr.length-1;i++){
-            if(arr[i]>0){
-                posArr.push(arr[i])
+// class Solution{
+//     segregateElements(arr,n){
+//         let posArr=[];
+//         let negArr=[];
+//         for (let i=0;i<=arr.length-1;i++){
+//             if(arr[i]>0){
+//                 posArr.push(arr[i])
          
-   } else if(arr[i]<0){
-                negArr.push(arr[i])
-            }
+//    } else if(arr[i]<0){
+//                 negArr.push(arr[i])
+//             }
             
-        }
-        console.log("pos ", posArr.toString())
-        console.log("neg ", negArr.toString())
-        for (let j=0;j<posArr.length;j++){
-           arr[j]=posArr[j];
-        }
-        console.log("arr1 ", arr.toString())
-        let count =0
-        for (let k=posArr.length;k<=arr.length-1;k++){
-            arr[k]=negArr[count]
-            count++;
-        }
-        console.log("arr2 ", arr.toString())
-        // return arr;
+//         }
+//         console.log("pos ", posArr.toString())
+//         console.log("neg ", negArr.toString())
+//         for (let j=0;j<posArr.length;j++){
+//            arr[j]=posArr[j];
+//         }
+//         console.log("arr1 ", arr.toString())
+//         let count =0;
+
+//         for (let k=posArr.length;k<=arr.length-1;k++){
+//             arr[k]=negArr[count]
+//             count++;
+//         }
+//         console.log("arr2 ", arr.toString())
+//         // return arr;
         
-    //   totalArr = posArr.concat(negArr);
-        // console.log(totalArr.toString())
-        // return totalArr.toString();
-        // return arr
-        // let arr1 = posArr;
-        // let arr2 = negArr;
-        // let arr3;
+//     //   totalArr = posArr.concat(negArr);
+//         // console.log(totalArr.toString())
+//         // return totalArr.toString();
+//         // return arr
+//         // let arr1 = posArr;
+//         // let arr2 = negArr;
+//         // let arr3;
         
      
-        // console.log( "negative is",totalArr)
-        // console.log("totalArray is ", totalArr.toString())
+//         // console.log( "negative is",totalArr)
+//         // console.log("totalArray is ", totalArr.toString())
      
-        // return totalArr;
+//         // return totalArr;
         
         
-        // return posArr;
-        // return negArr;
-        // console.log("posative",posArr);
-        // console.log("negative is",negArr)
+//         // return posArr;
+//         // return negArr;
+//         // console.log("posative",posArr);
+//         // console.log("negative is",negArr)
         
       
  
      
-        // console.log("sorting is",sortArr)
-        // return newArr
+//         // console.log("sorting is",sortArr)
+//         // return newArr
         
-    }
+//     }
     
-}
+// }
 
 
 
@@ -1306,6 +1307,28 @@ class Solution{
 
 
 
+// maxSubarraySum(arr, N){
+//     // code here
+// let maximum = Number.MIN_SAFE_INTEGER - 1;
+// let currentSum = 0;
+// for(let i=0; i<arr.length; i++){
+//     currentSum +=arr[i];
+//     if(currentSum >maximum){
+//         maximum = currentSum;
+//     }
+//     if(currentSum<0){
+//         currentSum =0;
+//     }
+// }
+// // console.log(maximum)
+// return maximum
+    
+// } 
+
+
+
+
+
 
 
 
@@ -1370,6 +1393,552 @@ class Solution{
 // let n = price.length;
 // document.write(maxProfit(
 // 			price, 0, n - 1));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let arr = [3,5,4,7,-3,7]
+
+
+// function maxNeedSum(arr)
+// {
+//     let max = -1;
+//     let min = 0;
+//     for(let i=0; i<arr.length;i++) {
+//         max+=arr[i];
+//         if(max>arr[i]) {
+//             max = arr[i]
+//         };
+//         // if()
+        
+//     }
+//     console.log(max)
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// Given an array arr[] denoting heights of N towers and a positive integer K.
+
+// For each tower, you must perform exactly one of the following operations exactly once.
+
+// Increase the height of the tower by K
+// Decrease the height of the tower by K
+// Find out the minimum possible difference between the height of the shortest and tallest towers after you have modified each tower.
+
+// You can find a slight modification of the problem here.
+// Note: It is compulsory to increase or decrease the height by K for each tower. After the operation, the resultant array should not contain any negative integers.
+
+// Example 1:
+
+// Input:
+// K = 2, N = 4
+// Arr[] = {1, 5, 8, 10}
+// Output:
+// 5
+// Explanation:
+// The array can be modified as 
+// {1+k, 5-k, 8-k, 10-k} = {3, 3, 6, 8}. 
+// The difference between 
+// the largest and the smallest is 8-3 = 5.
+
+
+
+// solve in javascript without using method and use for loop
+
+
+
+
+// function minPossibleDifference(K, N, Arr) {
+//     // Sort the array in non-decreasing order
+//     for (let i = 0; i < N; i++) {
+//         for (let j = 0; j < N - i - 1; j++) {
+//             if (Arr[j] > Arr[j + 1]) {
+//                 let temp = Arr[j];
+//                 Arr[j] = Arr[j + 1];
+//                 Arr[j + 1] = temp;
+//             }
+//         }
+//     }
+
+//     // Initialize the minimum and maximum heights after modification
+//     let minHeight = Arr[0] + K;
+//     let maxHeight = Arr[N - 1] - K;
+
+//     // Check if any tower's height can be made smaller or larger
+//     for (let i = 0; i < N - 1; i++) {
+//         let currentHeight = Arr[i];
+//         let nextHeight = Arr[i + 1];
+
+//         // Check if it's possible to decrease the current tower's height
+//         let potentialMin = Math.min(minHeight, currentHeight - K);
+//         // Check if it's possible to increase the next tower's height
+//         let potentialMax = Math.max(maxHeight, nextHeight + K);
+
+//         // Update the minimum and maximum heights accordingly
+//         if (potentialMin < 0 || potentialMax < 0) continue; // Skip if negative heights are encountered
+//         minHeight = potentialMin;
+//         maxHeight = potentialMax;
+//     }
+
+//     // Return the minimum possible difference
+//     return maxHeight - minHeight;
+// }
+
+// // Example usage
+// const K = 2;
+// const N = 4;
+// const Arr = [1, 5, 8, 10];
+// console.log(minPossibleDifference(K, N, Arr)); // Output: 5
+
+
+
+
+
+
+
+
+
+
+// Given an array Arr[] of N integers. Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum.
+
+
+// Example 1:
+
+// Input:
+// N = 5
+// Arr[] = {1,2,3,-2,5}
+// Output:
+// 9
+// Explanation:
+// Max subarray sum is 9
+// of elements (1, 2, 3, -2, 5) which 
+// is a contiguous subarray.
+// Example 2:
+
+// Input:
+// N = 4
+// Arr[] = {-1,-2,-3,-4}
+// Output:
+// -1
+// Explanation:
+// Max subarray sum is -1 
+// of element (-1)
+
+
+
+
+
+
+// class Solution {
+//     //Function to find the sum of contiguous subarray with maximum sum.
+//     maxSubarraySum(arr, N){
+//         // code here
+//     let maximum = Number.MIN_SAFE_INTEGER - 1;
+//     let currentSum = 0;
+//     for(let i=0; i<arr.length; i++){
+//         currentSum +=arr[i];
+//         if(currentSum >maximum){
+//             maximum = currentSum;
+//         }
+//         if(currentSum<0){
+//             currentSum =0;
+//         }
+//     }
+//     // console.log(maximum)
+//     return maximum
+        
+//     } 
+// }
+
+
+
+
+
+
+
+
+
+
+// Given two arrays: a1[0..n-1] of size n and a2[0..m-1] of size m, where both arrays may contain duplicate elements. The task is to determine whether array a2 is a subset of array a1. It's important to note that both arrays can be sorted or unsorted. Additionally, each occurrence of a duplicate element within an array is considered as a separate element of the set.
+
+// Example 1:
+
+// Input:
+// a1[] = {11, 7, 1, 13, 21, 3, 7, 3}
+// a2[] = {11, 3, 7, 1, 7}
+// Output:
+// Yes
+// Explanation:
+// a2[] is a subset of a1[]
+
+// Example 2:
+
+// Input:
+// a1[] = {1, 2, 3, 4, 4, 5, 6}
+// a2[] = {1, 2, 4}
+// Output:
+// Yes
+// Explanation:
+// a2[] is a subset of a1[]
+
+// Example 3:
+
+// Input:
+// a1[] = {10, 5, 2, 23, 19}
+// a2[] = {19, 5, 3}
+// Output:
+// No
+// Explanation:
+// a2[] is not a subset of a1[]
+
+
+
+
+
+// class Solution{
+//     isSubset(a1, a2, n, m){
+//         //code here
+//         let sortA1 = a1.sort( (a , b) => a - b);
+//         let sortA2 = a2.sort( (a , b) => a - b);
+//         // console.log("sortA1 is", sortA1);
+//         // console.log("sortA2 is" ,sortA2)
+//         let arrElement = {};
+//         let arrElement2 = {};
+        
+//         for(let i=0; i<sortA1.length; i++){
+//             let firstElement = sortA1[i];
+//             if(!arrElement[firstElement]){
+//                 arrElement[firstElement] = 1;
+//             } else {
+//                 arrElement[firstElement] ++;
+//             }
+//         }
+        
+//         // console.log("first array element is ",arrElement)
+        
+        
+//         for(let j =0; j<sortA2.length; j++) {
+//             let secondElement = sortA2[j]
+            
+//             if (!arrElement2[secondElement] ){
+//                 arrElement2[secondElement] =1;
+//             }
+//             else {
+//                 arrElement2[secondElement] ++;
+//             }
+        
+//         } 
+        
+//                 // console.log("second array element is ",arrElement2)
+
+        
+        
+//     for (let key in arrElement2) {
+//         if (!(key in arrElement) ) {
+//             return "No";
+//         }
+//     }
+
+//     return "Yes"
+        
+        
+//     }
+// }
+
+
+
+
+
+
+//         // if ( arrElement == arrElement2){
+//         //     return "Yes"
+//         // }
+        
+//         // else {
+//         //     return "No"
+//         // }
+
+
+
+
+
+//         // else {
+//         //     return "yes"
+//         // }
+//         // return "Yes"
+        
+        
+
+
+
+
+
+
+
+
+
+// Given three arrays sorted in increasing order. Find the elements that are common in all three arrays.
+// Note: can you take care of the duplicates without using any additional Data Structure?
+
+// Example 1:
+
+// Input:
+// n1 = 6; A = {1, 5, 10, 20, 40, 80}
+// n2 = 5; B = {6, 7, 20, 80, 100}
+// n3 = 8; C = {3, 4, 15, 20, 30, 70, 80, 120}
+// Output: 20 80
+// Explanation: 20 and 80 are the only
+// common elements in A, B and C.
+ 
+
+// Your Task:  
+// You don't need to read input or print anything. Your task is to complete the function commonElements() which take the 3 arrays A[], B[], C[] and their respective sizes n1, n2 and n3 as inputs and returns an array containing the common element present in all the 3 arrays in sorted order. 
+// If there are no such elements return an empty array. In this case the output will be printed as -1.
+
+
+
+
+
+
+// class Solution{
+//     commonElements(arr1, arr2, arr3, n1, n2,n3){
+//         // let first = 0;
+//         // let second = 0;
+//         // let third = 0;
+//         let result =[]
+    
+//       for (let i =0; i<n1; i++) {
+
+//            for (let j=0; j<n2;j++){
+               
+//                for (let k=0; k<n3; k++){
+                   
+//                  if (arr1[i]===arr2[j] && arr2[j]===arr3[k])  {
+                     
+//                     //  if (result != arr1[i]){
+//                          result.push(arr1[i]);
+//                     //  }
+//                  }
+//                }
+//            }
+//         //   first.push(n1[i])
+//         //   result +=n1[i]
+//       } 
+//     //   console.log(result)
+//     //   return first ;
+//     return result
+//     }
+    
+// }
+
+
+
+
+
+
+
+
+
+// Binary Search In JavaScript
+
+
+
+
+
+// let recursiveFunction = function (arr, x, start, end) {
+
+// 	// Base Condition
+// 	if (start > end) return false;
+
+// 	// Find the middle index
+// 	let mid = Math.floor((start + end) / 2);
+
+// 	// Compare mid with given key x
+// 	if (arr[mid] === x) return true;
+
+// 	// If element at mid is greater than x,
+// 	// search in the left half of mid
+// 	if (arr[mid] > x)
+// 		return recursiveFunction(arr, x, start, mid - 1);
+// 	else
+
+// 		// If element at mid is smaller than x,
+// 		// search in the right half of mid
+// 		return recursiveFunction(arr, x, mid + 1, end);
+// }
+
+// // Driver code
+// let arr = [1, 3, 5, 7, 8, 9];
+// let x = 5;
+
+// if (recursiveFunction(arr, x, 0, arr.length - 1)) {
+// 	console.log("Element found!");
+// }
+// else { console.log("Element not found!"); }
+
+// x = 6;
+
+// if (recursiveFunction(arr, x, 0, arr.length - 1)) {
+// 	console.log("Element found!");
+// }
+// else { console.log("Element not found!"); }
+
+
+
+
+
+
+
+   //binary 
+
+
+
+//    function isBinary( array, needValue, start , end){
+    
+//     if(start >end) return false;
+    
+//     let middleValue = Math.floor((start +end ) /2 );
+    
+//     if(array[middleValue] == needValue) return true;
+    
+//     if(array[middleValue] > needValue ) {
+//         return isBinary(array , needValue, start , middleValue -1)
+//     }
+    
+//     else {
+//         return isBinary(array , needValue,  middleValue +1 , end)
+//     }
+    
+    
+//     // if(array[middleValue] <end) {
+//     //     return isBinary(array , needValue , )
+//     // }
+    
+    
+//     }
+    
+//     let array = [ 5,6,7,9,11,20, 25,38,41,52,63,74,65];
+//     let needValue = 65;
+    
+    
+//     let result = isBinary(array , needValue , 0 , array.length -1);
+    
+//     console.log(result)
+
+
+
+
+
+
+
+// check the array is odd or even 
+
+
+// let array = [5,7,4,8,2,9,3,7,12,56,23,23,45,6,7];
+// let evenArray = []
+// let oddArray = []
+
+// for (let i = 0; i<array.length; i++){
+//     if(array[i] % 2 ==0){
+//         evenArray.push(array[i])
+//     }
+//     else {
+//         oddArray.push(array[i])
+//     }
+    
+// }
+// console.log("even array is",evenArray);
+// console.log("odd array is",oddArray)
+
+
+
+
+
+
+
+
+// array map function
+
+
+// let array = [5,7,4,8,2,9,3,7,12,56,23,23,45,6,7];
+// let evenArray = []
+// let oddArray = []
+
+// for (let i = 0; i<array.length; i++){
+//     if(array[i] % 2 ==0){
+//         evenArray.push(array[i])
+//     }
+//     else {
+//         oddArray.push(array[i])
+//     }
+    
+// }
+// console.log("even array is",evenArray);
+// console.log("odd array is",oddArray)
+
+
+
+
+
+// erverse a array 
+
+
+// let array = [3,6,9,5,7,1];
+
+// let reverseArr = [];
+
+// for (let i =array.length -1 ; i>=0 ; i--){
+//     reverseArr.push(array[i]);
+//     // reverseArr+=array[i];
+// }
+
+// console.log(reverseArr)
+
+
+
+
+
+
+// array of sum ""
+
+
+// let array = [3,5,6,8,9,5,0,6];
+
+// let sum = 0;
+
+// for (let i =0;i<array.length; i++){
+//     sum +=array[i]
+// }
+
+
+// console.log(sum)
+
+
+
+
+
+
+
+
 
 
 
