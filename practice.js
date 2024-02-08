@@ -1876,6 +1876,220 @@
 
 
 
+
+
+
+// function isRotatedString(s1, s2) {
+//   // Ensure strings have the same length
+//   if (s1.length !== s2.length) {
+//     return false;
+//   }
+
+//   // Find a potential rotation point in s1
+//   for (let i = 1; i < s1.length; i++) {
+//     if (s1[i] === s2[0]) {
+//       // Check if characters match after rotation
+//       let j = 0;
+//       while (j < s1.length) {
+//         if (s1[(i + j) % s1.length] !== s2[j]) {
+//           break;
+//         }
+//         j++;
+//       }
+//       if (j === s1.length) {
+//         return true;
+//       }
+//     }
+//   }
+
+//   // No rotation point found
+//   return false;
+// }
+
+
+
+
+
+
+// function areRotations(s1, s2) {
+//   // Convert strings to lowercase
+//   let s1Lower = s1.toLowerCase();
+//   let s2Lower = s2.toLowerCase();
+
+//   // Check if lengths are equal
+//   if (s1Lower.length !== s2Lower.length) return false;
+
+//   // Concatenate s1 twice to cover all possible rotations
+//   let totalLength = s1Lower + s1Lower;
+
+//   // Loop through concatenated string
+//   for (let i = 0; i < totalLength.length; i++) {
+//       // Check if the current substring matches s2
+//       let isRotation = true;
+//       for (let j = 0; j < s2Lower.length; j++) {
+//           if (totalLength[i + j] !== s2Lower[j]) {
+//               isRotation = false;
+//               break;
+//           }
+//       }
+//       // If all characters match, return true
+//       if (isRotation) return true;
+//   }
+
+//   // If no rotation found, return false
+//   return false;
+// }
+
+// // Test cases
+// console.log(areRotations("geeksforgeeks", "forgeeksgeeks")); // Output: true
+// console.log(areRotations("hello", "world")); // Output: false
+
+
+
+
+
+
+
+// function areRotations(s1, s2) {
+//   // Check if lengths are different
+//   if (s1.length !== s2.length) {
+//       return false;
+//   }
+
+//   // Concatenate s1 with itself to handle rotations
+//   const concatenated = s1 + s1;
+
+//   // Check if s2 is a substring of the concatenated string
+//   for (let i = 0; i < concatenated.length - s2.length + 1; i++) {
+//       let isRotation = true;
+//       // Check if each character of s2 matches the corresponding character in the concatenated string
+//       for (let j = 0; j < s2.length; j++) {
+//           if (concatenated[i + j] !== s2[j]) {
+//               isRotation = false;
+//               break;
+//           }
+//       }
+
+
+
+
+
+
+// function isRotatedString(s1, s2) {
+//   // Ensure strings have the same length
+//   if (s1.length !== s2.length) {
+//     return false;
+//   }
+
+//   // Find a potential rotation point in s1
+//   for (let i = 1; i < s1.length; i++) {
+//     if (s1[i] === s2[0]) {
+//       // Check if characters match after rotation
+//       let j = 0;
+//       while (j < s1.length) {
+//         if (s1[(i + j) % s1.length] !== s2[j]) {
+//           break;
+//         }
+//         j++;
+//       }
+//       if (j === s1.length) {
+//         return true;
+//       }
+//     }
+//   }
+
+//   // No rotation point found
+//   return false;
+// }
+
+
+
+//       // If all characters match, return true
+//       if (isRotation) {
+//           return true;
+//       }
+//   }
+
+//   // If no match is found, return false
+//   return false;
+// }
+
+// // Test cases
+// console.log(areRotations("geeksforgeeks", "forgeeksgeeks")); // Output: true
+// console.log(areRotations("hello", "world")); // Output: false
+
+
+
+
+// You are given two strings of equal lengths, s1 and s2. The task is to check if s2 is a rotated version of the string s1.
+
+// Note: The characters in the strings are in lowercase.
+
+// Example 1:
+
+// Input:
+// geeksforgeeks
+// forgeeksgeeks
+// Output: 
+// 1
+// Explanation: s1 is geeksforgeeks, s2 is
+// forgeeksgeeks. Clearly, s2 is a rotated
+// version of s1 as s2 can be obtained by
+// left-rotating s1 by 5 units.
+
+
+
+
+
+// areRotations(s1, s2)
+    
+//     {
+          
+//              // Check if lengths are different
+//   if (s1.length !== s2.length) {
+//       return false;
+//   }
+
+//   // Concatenate s1 with itself to handle rotations
+// //   const concatenated = s1 + s1;
+
+// let totalLength = s1 + s1;
+
+//   // Check if s2 is a substring of the concatenated string
+//   for (let i = 0; i < totalLength.length - s2.length + 1; i++) {
+//       let isRotation = true;
+//       // Check if each character of s2 matches the corresponding character in the concatenated string
+//       for (let j = 0; j < s2.length; j++) {
+//           if (totalLength[i + j] !== s2[j]) {
+//               isRotation = false;
+//               break;
+//           }
+//       }
+
+
+
+
+//       // If all characters match, return true
+//       if (isRotation) {
+//           return 1;
+//       }
+//   }
+
+//   // If no match is found, return false
+//   return 0;
+//     }
+
+
+
+
+
+
+
+
+
+
+
+
 // array map function
 
 
@@ -1934,6 +2148,192 @@
 
 
 
+
+
+
+
+
+
+
+
+// Given an array of size n and a range [a, b]. The task is to partition the array around the range such that array is divided into three parts.
+// 1) All elements smaller than a come first.
+// 2) All elements in range a to b come next.
+// 3) All elements greater than b appear in the end.
+// The individual elements of three sets can appear in any order. You are required to return the modified array.
+
+// Note: The generated output is 1 if you modify the given array successfully.
+
+
+// Example 1:
+
+// Input: 
+// n = 5
+// A[] = {1, 2, 3, 3, 4}
+// [a, b] = [1, 2]
+// Output: 1
+// Explanation: One possible arrangement is:
+// {1, 2, 3, 3, 4}. If you return a valid
+// arrangement, output will be 1.
+
+
+
+
+// function partitionArray(arr, n, a, b) {
+//   // Ensure a <= b
+//   if (a > b) {
+//     return -1; // Error: invalid range
+//   }
+
+//   // Initialize start and end indices
+//   let start = 0;
+//   let end = n - 1;
+
+//   // Partition the array
+//   while (start <= end) {
+//     if (arr[start] < a) {
+//       // Element belongs to the first part, swap and move start
+//       swap(arr, start, end);
+//       end--;
+//     } else if (arr[start] > b) {
+//       // Element belongs to the third part, swap and move end
+//       swap(arr, start, end);
+//       start++;
+//     } else {
+//       // Element belongs to the second part, move start
+//       start++;
+//     }
+//   }
+
+//   // Array is now partitioned, return 1 for success
+//   return 1;
+// }
+
+// // Swap function for efficiency
+// function swap(arr, i, j) {
+//   let temp = arr[i];
+//   arr[i] = arr[j];
+//   arr[j] = temp;
+// }
+
+// // Example usage
+// const arr = [1, 2, 3, 3, 4];
+// const n = arr.length;
+// const a = 1;
+// const b = 2;
+
+// const result = partitionArray(arr, n, a, b);
+
+// console.log(arr); // Output: [1, 2, 3, 3, 4] (or any valid partitioned array)
+// console.log(result); // Output: 1
+
+// // Example with invalid range
+// const result2 = partitionArray(arr, n, 3, 1);
+// console.log(result2); // Output: -1 (error message)
+
+
+
+
+
+
+// function partitionArray(arr, a, b) {
+//   let low = 0;
+//   let high = arr.length - 1;
+
+//   for (let i = 0; i <= high; i++) {
+//     if (arr[i] < a) {
+//       // Swap with element at low index
+//       [arr[i], arr[low]] = [arr[low], arr[i]];
+//       low++;
+//     } else if (arr[i] > b) {
+//       // Swap with element at high index
+//       [arr[i], arr[high]] = [arr[high], arr[i]];
+//       high--;
+//       i--; // Decrement i to recheck the swapped element
+//     }
+//   }
+
+//   return 1; // Indicate successful modification
+// }
+
+// // Example usage
+// const arr = [1, 2, 3, 3, 4];
+// const a = 1;
+// const b = 2;
+
+// partitionArray(arr, a, b);
+// console.log(arr); // Output: [1, 2, 3, 3, 4] (partitioned successfully)
+
+
+
+
+
+
+
+
+
+// You are given two strings of equal lengths, s1 and s2. The task is to check if s2 is a rotated version of the string s1.
+
+// Note: The characters in the strings are in lowercase.
+
+// Example 1:
+
+// Input:
+// geeksforgeeks
+// forgeeksgeeks
+// Output: 
+// 1
+// Explanation: s1 is geeksforgeeks, s2 is
+// forgeeksgeeks. Clearly, s2 is a rotated
+// version of s1 as s2 can be obtained by
+// left-rotating s1 by 5 units.
+// Example 2:
+
+// Input:
+// mightandmagic
+// andmagicmigth
+// Output: 
+// 0
+// Explanation: Here with any amount of
+// rotation s2 can't be obtained by s1.
+
+
+
+
+// class Solution 
+// {
+//     //Function to check if two strings are rotations of each other or not.
+//     areRotations(s1, s2)
+    
+//     {
+//         // code here
+//         let s1Lower= s1.toLowerCase().split('');
+//         let s2Lower = s2.toLowerCase().split('');
+        
+//         if( s1Lower.length !== s2Lower.length )  return false;
+        
+//         let totalLength = s1Lower + s1Lower;
+        
+//         let i =0;
+//         let j =0;
+//         let rotation = false
+//         while (i<s2Lower.length && j<totalLength.length ){
+//             rotation = true;
+//             if( s2Lower[i] ==totalLength[j] ){
+//                 i++;
+//                 j++ ;
+//             //  return  1;
+//             }
+//             else {
+//                 rotation = false;
+//                 j++;
+//             //   return 0; 
+//             } 
+//         }
+//         return rotation;
+//     }
+// }
+   
 
 
 

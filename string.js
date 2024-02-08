@@ -258,6 +258,79 @@
 
 
 
+// You are given two strings of equal lengths, s1 and s2. The task is to check if s2 is a rotated version of the string s1.
+
+// Note: The characters in the strings are in lowercase.
+
+// Example 1:
+
+// Input:
+// geeksforgeeks
+// forgeeksgeeks
+// Output: 
+// 1
+// Explanation: s1 is geeksforgeeks, s2 is
+// forgeeksgeeks. Clearly, s2 is a rotated
+// version of s1 as s2 can be obtained by
+// left-rotating s1 by 5 units.
+// Example 2:
+
+// Input:
+// mightandmagic
+// andmagicmigth
+// Output: 
+// 0
+// Explanation: Here with any amount of
+// rotation s2 can't be obtained by s1.
+
+
+
+
+// class Solution 
+// {
+//     //Function to check if two strings are rotations of each other or not.
+//     areRotations(s1, s2)
+    
+//     {
+//         // code here
+//         let s1Lower= s1.toLowerCase().split('');
+//         let s2Lower = s2.toLowerCase().split('');
+        
+//         if( s1Lower.length !== s2Lower.length )  return false;
+        
+//         let totalLength = s1Lower + s1Lower;
+        
+//         let i =0;
+//         let j =0;
+//         let rotation = false
+//         while (i<s2Lower.length && j<totalLength.length ){
+//             rotation = true;
+//             if( s2Lower[i] ==totalLength[j] ){
+//                 i++;
+//                 j++ ;
+//             //  return  1;
+//             }
+//             else {
+//                 rotation = false;
+//                 j++;
+//             //   return 0; 
+//             } 
+//         }
+//         return rotation;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
