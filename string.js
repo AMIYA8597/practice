@@ -331,6 +331,46 @@
 
 
 
+// function isPatternPresent(str, pat) {
+//     // Iterate over the string
+//     for (let i = 0; i <= str.length - pat.length; i++) {
+//         let j;
+//         // Check if pattern matches the substring starting at index i
+//         for (j = 0; j < pat.length; j++) {
+//             if (str[i + j] !== pat[j]) {
+//                 break; // If characters don't match, break the inner loop
+//             }
+//         }
+//         // If inner loop finished without breaking, pattern is found
+//         if (j === pat.length) {
+//             return true;
+//         }
+//     }
+//     // If pattern is not found after checking all substrings, return false
+//     return false;
+// }
+
+// // Test cases
+// console.log(isPatternPresent("abcdefh", "bcd") ? "Present" : "Not present");
+// console.log(isPatternPresent("axzy", "xy") ? "Present" : "Not present");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

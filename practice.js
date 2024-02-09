@@ -9,6 +9,8 @@
 //     console.log(reversedArray)
 
 
+
+
 // function checkPalindrome(str) {  
 //     // get the total length of the words  
 //     const len = str.length;  
@@ -2063,7 +2065,7 @@
 //           if (totalLength[i + j] !== s2[j]) {
 //               isRotation = false;
 //               break;
-//           }
+//             }
 //       }
 
 
@@ -2233,6 +2235,31 @@
 
 
 
+
+
+
+
+
+
+// function decimalToBinary(decimal) {
+//   if (decimal === 0) {
+//       return '0';
+//   }
+
+//   let binary = '';
+//   while (decimal > 0) {
+//       binary = (decimal % 2) + binary;
+//       decimal = Math.floor(decimal / 2);
+//   }
+
+//   return binary;
+// }
+
+// //  console.log(decimalToBinary(22))
+// //  Example usage:
+// const decimalNumber = 25;
+// const binaryNumber = decimalToBinary(decimalNumber);
+// console.log(`Binary representation of ${decimalNumber} is: ${binaryNumber}`);
 
 
 

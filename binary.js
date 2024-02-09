@@ -99,4 +99,74 @@
 // let result = binarySearch(array , needValue , 0 , array.length -1);
 
 // console.log(result)
- 
+
+
+
+
+
+
+
+
+
+
+
+
+// function isBinary(arr , need , start , end) {
+//     if( start > end ) return false;
+    
+//     let middle = Math.floor((start + end ) /2 );
+    
+//     if(arr[middle] == need) return true;
+    
+//     if(arr[middle] > need) {
+//         return isBinary(arr, need , start , middle -1 )
+//     }
+    
+//     else{
+//         return isBinary(arr, need , middle+1, end)
+//     }
+//    else {
+//        return false
+//    }
+    
+// }
+
+// let arr = [8,9,11,14,25,36,47,58,69,70]
+// let need = 88;
+
+// //   console.log(isBinary(  [2,4,6,8,11,15] , 8 , 0 , arr.length -1))
+
+// let result = isBinary(arr , need , 0, arr.length-1);
+
+// console.log(result);
+
+
+
+
+
+
+
+
+
+
+let array = [4,6,12,24,32,45,53,58];
+
+let needValue =82
+
+
+ function binary (array , needValue , start , end){
+    if(start > end) return false;
+
+    let middleValue = Math.floor( (start + end) / 2 );
+
+    if (array[middleValue] != needValue) return false;
+
+    if(array[middleValue] > needValue) {
+        return middleValue
+    };
+
+    else if(array[middleValue] < needValue) {
+
+    }
+
+ }
