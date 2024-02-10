@@ -368,3 +368,128 @@
 // * * * 
 // * * * * 
 // * * * * * 
+
+
+
+
+
+
+
+// let arr = [3,4,5,7,8,17,29,30,40,47,56,63,84,92];
+
+// let needValue = 29;
+
+// function check (arr , needValue , start , end)
+// {
+//     if(start >= end) {
+//         return false;
+//     };
+
+//     while (start <=end) {
+//         console.log( "start is",start)
+//         console.log( "end is",end)
+//         let middle = Math.floor( (start + end ) / 2);
+//         console.log("middle", middle);
+//         if( arr[middle] == needValue) {
+//             return true;
+//         }
+
+//         else if (arr[middle] < needValue) {
+//             start = middle + 1;
+//         }
+//         else {
+//             end = middle - 1;
+//         }
+//     }
+//     return false;
+// }
+
+// console.log(check (arr , needValue , 0 , arr.length -1));
+
+
+
+
+
+
+
+
+// let startArr = [4,55,68,92,101,124,245,456]
+
+// let valueIndex = 92;
+
+// function sum ( startArr , valueIndex , start , end) 
+// {
+//     while (start <= end) {
+//         console.log("start is",start)
+//         console.log("end is",end)
+
+//         let middle = Math.floor(( start + end ) / 2);
+//         console.log("middle is",middle)
+    
+//         if(startArr[middle] == valueIndex ){
+//             return true;
+//         }
+//         else if(startArr[middle] < valueIndex){
+//             start = middle + 1
+//             // return true;
+//         }
+//         else {
+//            end = middle -1 
+//         }
+//     }
+//     return false
+    
+// }
+
+// console.log( sum( startArr , valueIndex , 0 , startArr.length -1))
+
+
+
+
+
+
+let data = [24, 35,67,54,89,98];
+
+let newElement = 45;
+let position = 2;
+
+for (let i = data.length - 1; i >= 0; i--){
+    if (data[i] > newElement){
+        data.splice(position, 0, newElement);
+        break;
+    }else{
+        position++
+    }
+}
+console.log('the array after insert',data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
