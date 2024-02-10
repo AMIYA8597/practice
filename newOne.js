@@ -375,36 +375,36 @@
 
 
 
-// let arr = [3,4,5,7,8,17,29,30,40,47,56,63,84,92];
+let arr = [3,4,5,7,8,17,29,30,40,47,56,63,84,92];
 
-// let needValue = 29;
+let needValue = 29;
 
-// function check (arr , needValue , start , end)
-// {
-//     if(start >= end) {
-//         return false;
-//     };
+function check (arr , needValue , start , end)
+{
+    if(start >= end) {
+        return false;
+    };
 
-//     while (start <=end) {
-//         console.log( "start is",start)
-//         console.log( "end is",end)
-//         let middle = Math.floor( (start + end ) / 2);
-//         console.log("middle", middle);
-//         if( arr[middle] == needValue) {
-//             return true;
-//         }
+    while (start <=end) {
+        console.log( "start is",start)
+        console.log( "end is",end)
+        let middle = Math.floor( (start + end ) / 2);
+        console.log("middle", middle);
+        if( arr[middle] == needValue) {
+            return true;
+        }
 
-//         else if (arr[middle] < needValue) {
-//             start = middle + 1;
-//         }
-//         else {
-//             end = middle - 1;
-//         }
-//     }
-//     return false;
-// }
+        else if (arr[middle] < needValue) {
+            start = middle + 1;
+        }
+        else {
+            end = middle - 1;
+        }
+    }
+    return false;
+}
 
-// console.log(check (arr , needValue , 0 , arr.length -1));
+console.log(check (arr , needValue , 0 , arr.length -1));
 
 
 
@@ -467,7 +467,22 @@ console.log('the array after insert',data)
 
 
 
+// recursion 
 
+function isRecursion (data) {
+   let midle = Math.floor((data.length)/2);
+   if (data.length === 1 ) {
+       return true
+   }else if (data[midle] === data[0]){
+       return isRecursion([...data.slice(1), ...data.slice(0, midle)]);
+   } else if (data[midle] > data[0]){
+      return isRecursion(data.slice(0, midle));
+   }else{
+      return isRecursion(data.slice(midle+1))
+   }
+};
+
+console.log(isRecursion(data));
 
 
 
