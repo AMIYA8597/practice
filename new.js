@@ -43,10 +43,27 @@
 // }, 5000)
 
 
-setInterval( ()=> {
-    // console.log("tu vaag yaha se")
-    console.log( new Date());
-} , 2000)
+// setInterval( ()=> {
+//     // console.log("tu vaag yaha se")
+//     console.log( new Date());
+// } , 2000)
+
+
+// let arr = [3, 2, 1, 7, 5, 4];  
+
+// let odd = [];
+// let even = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (i % 2 === 0) { // even index
+//         even.push(arr[i]);
+//     } else { // odd index
+//         odd.push(arr[i]);
+//     }
+// }
+
+// console.log("Elements at even index positions:", even);
+// console.log("Elements at odd index positions:", odd);
 
 
 
@@ -58,6 +75,15 @@ setInterval( ()=> {
 
 
 
+// let arr = [3, 2, 1, 7, 5, 4];  
+
+// // Sort the array in descending order
+// arr.sort((a, b) => b - a);
+
+// // The second largest element will be at index 1
+// let secondLargest = arr[1];
+
+// console.log("Second largest element:", secondLargest);
 
 
 
@@ -68,6 +94,14 @@ setInterval( ()=> {
 
 
 
+// function isPalindrome(str) { 
+
+//     return str === str.split(”).reverse().join(”); 
+  
+//   }
+
+//   let str = "amma"
+//   console.log( isPalindrome(str))
 
 
 
@@ -75,9 +109,40 @@ setInterval( ()=> {
 
 
 
+// function romanToInt(s) {
+//     const romanValues = {
+//         'I': 1,
+//         'V': 5,
+//         'X': 10,
+//         'L': 50,
+//         'C': 100,
+//         'D': 500,
+//         'M': 1000
+//     };
 
+//     let result = 0;
+//     let prevValue = 0;
 
+//     for (let i = 0; i < s.length; i++) {
+//         const currValue = romanValues[s[i]];
+        
+//         if (currValue > prevValue) {
+//             // If current value is greater than the previous value,
+//             // subtract the previous value twice because it was added once before
+//             result += currValue - 2 * prevValue;
+//         } else {
+//             result += currValue;
+//         }
 
+//         prevValue = currValue;
+//     }
+
+//     return result;
+// }
+
+// // Test cases
+// console.log(romanToInt("V")); // Output: 5
+// console.log(romanToInt("III")); // Output: 3
 
 
 
