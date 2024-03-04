@@ -15,6 +15,131 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+
+ 
+
+// Example 1:
+
+// Input: haystack = "sadbutsad", needle = "sad"
+// Output: 0
+// Explanation: "sad" occurs at index 0 and 6.
+// The first occurrence is at index 0, so we return 0.
+// Example 2:
+
+// Input: haystack = "leetcode", needle = "leeto"
+// Output: -1
+// Explanation: "leeto" did not occur in "leetcode", so we return -1.
+
+
+
+
+
+// var strStr = function(haystack, needle) {
+//     const haystackLength = haystack.length;
+//     const needleLength = needle.length;
+
+//     // Iterate through each possible starting position in the haystack
+//     for (let i = 0; i <= haystackLength - needleLength; i++) {
+//         let match = true;
+
+//         // Check if the substring starting at the current position matches the needle
+//         for (let j = 0; j < needleLength; j++) {
+//             if (haystack[i + j] !== needle[j]) {
+//                 match = false;
+//                 break;
+//             }
+//         }
+
+//         if (match) {
+//             return i;
+//         }
+//     }
+
+//     return -1;
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// A word is a maximal 
+// substring
+//  consisting of non-space characters only.
+
+ 
+
+// Example 1:
+
+// Input: s = "Hello World"
+// Output: 5
+// Explanation: The last word is "World" with length 5.
+// Example 2:
+
+// Input: s = "   fly me   to   the moon  "
+// Output: 4
+// Explanation: The last word is "moon" with length 4.
+// Example 3:
+
+// Input: s = "luffy is still joyboy"
+// Output: 6
+// Explanation: The last word is "joyboy" with length 6.
+
+
+
+
+
+
+// var lengthOfLastWord = function(s) {
+//     // Remove trailing spaces
+//     const trimmedString = s.trim();
+
+//     // Find the last space in the trimmed string
+//     const lastSpaceIndex = trimmedString.lastIndexOf(' ');
+
+//     // If no space is found, the entire trimmed string is the last word
+//     if (lastSpaceIndex === -1) {
+//         return trimmedString.length;
+//     }
+
+//     // Return the length of the last word
+//     return trimmedString.length - lastSpaceIndex - 1;
+// };
+
+
+
 // class Solution {
     
 //     reverseWord(str){
