@@ -72,6 +72,58 @@
 
 
 
+    // var removeDuplicates = function(nums) {
+    //     // Create a Set from the input array to automatically remove duplicates, then convert it back into an Array.
+    //     // Create an empty set to store the numbers in.
+    //     let seenNums = new Set();
+
+
+
+
+
+
+
+
+
+
+
+
+    
+// // follow up question  
+ // // here i am printing maximum subarray and their sum
+
+function maxSubnums(nums) {
+    let maxSum =nums[0];
+    let startIdx = 0;
+    let endIdx = 0;
+
+    for (let i = 0; i < nums.length; i++) {   // n
+        let currentSum =0;
+
+        for (let j =i; j <nums.length; j++) { // n / n-1 / n-2 / n-3 / n-4 ...
+            currentSum= currentSum +nums[j];
+            if (currentSum >maxSum){
+                maxSum =currentSum;
+                startIdx= i;
+                endIdx = j;
+            }
+       }
+        
+    }
+    return {sum :maxSum, subAray: nums.slice(startIdx , endIdx +1)};
+}
+
+// console.log( "max sub number is",maxSubnums( [-2,4,-3,3,-1,4,1,-4,-8,7]));
+console.log( "max sub number is",maxSubnums( [5,-6,3,8,-12,9,4,-8]));
+
+
+
+
+
+
+
+
+
 
 
 
