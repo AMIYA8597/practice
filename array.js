@@ -214,6 +214,96 @@ console.log( "max sub number is",maxSubnums( [5,-6,3,8,-12,9,4,-8]));
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// # Function to find the pivot index using binary search
+// def find_pivot(nums):
+//     left, right = 0, len(nums) - 1
+
+//     while left < right:
+//         mid = left + (right - left) // 2
+
+//         if nums[mid] > nums[right]:
+//             left = mid + 1
+//         else:
+//             right = mid
+
+//     return left
+
+// # Function to perform binary search
+// def binary_search(left, right):
+//     while left <= right:
+//         mid = left + (right - left) // 2
+//         if nums[mid] == target:
+//             return mid
+//         elif nums[mid] < target:
+//             left = mid + 1
+//         else:
+//             right = mid - 1
+//     return -1
+
+
+
+
+
+
+
+
+// var search = function(nums, target) {
+//     let left = 0;
+//  let right = nums.length - 1;
+
+//  while (left <= right) {
+//      let mid = Math.floor((left + right) / 2);
+
+//      if (nums[mid] === target) {
+//          return mid;
+//      }
+
+//      if (nums[left] <= nums[mid]) {
+//          // Left half is sorted
+//          if (nums[left] <= target && target < nums[mid]) {
+//              // Target is in the left half
+//              right = mid - 1;
+//          } else {
+//              // Target is in the right half
+//              left = mid + 1;
+//          }
+//      } else {
+//          // Right half is sorted
+//          if (nums[mid] < target && target <= nums[right]) {
+//              // Target is in the right half
+//              left = mid + 1;
+//          } else {
+//              // Target is in the left half
+//              right = mid - 1;
+//          }
+//      }
+//  }
+
+//  return -1; // Target not found 
+// };
+
+
+
+
+
+
+
+
+
+
+
+
 // Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
 
 // Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
