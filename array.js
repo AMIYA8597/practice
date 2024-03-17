@@ -205,7 +205,78 @@ console.log( "max sub number is",maxSubnums( [5,-6,3,8,-12,9,4,-8]));
 
 
 
+// Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
 
+// The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the 
+// frequency
+//  of at least one of the chosen numbers is different.
+
+// The test cases are generated such that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
+
+ 
+
+// Example 1:
+
+// Input: candidates = [2,3,6,7], target = 7
+// Output: [[2,2,3],[7]]
+// Explanation:
+// 2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
+// 7 is a candidate, and 7 = 7.
+// These are the only two combinations.
+// Example 2:
+
+// Input: candidates = [2,3,5], target = 8
+// Output: [[2,2,2,2],[2,3,3],[3,5]]
+// Example 3:
+
+// Input: candidates = [2], target = 1
+// Output: []
+
+
+
+
+
+
+
+
+
+
+
+
+// var combinationSum = function(candidates, target) {
+//     const result = [];
+    
+//     // Define a recursive function to find combinations
+//     const findCombinations = (currentCombination, startIndex, currentSum) => {
+//         // If the current sum equals target, add the current combination to result
+//         if (currentSum === target) {
+//             result.push([...currentCombination]);
+//             return;
+//         }
+        
+//         // If the current sum exceeds target or we've exhausted candidates, stop
+//         if (currentSum > target || startIndex >= candidates.length) {
+//             return;
+//         }
+        
+//         // Loop through candidates starting from startIndex
+//         for (let i = startIndex; i < candidates.length; i++) {
+//             // Add the current candidate to the combination
+//             currentCombination.push(candidates[i]);
+            
+//             // Recursively call the function with updated parameters
+//             findCombinations(currentCombination, i, currentSum + candidates[i]);
+            
+//             // Backtrack by removing the last element to try other combinations
+//             currentCombination.pop();
+//         }
+//     };
+    
+//     // Start the recursive function with empty combination, starting index 0, and sum 0
+//     findCombinations([], 0, 0);
+    
+//     return result;
+// };
 
 
 
