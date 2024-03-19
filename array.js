@@ -287,6 +287,34 @@ console.log( "max sub number is",maxSubnums( [5,-6,3,8,-12,9,4,-8]));
 
 
 
+var sortColors = function(nums) {
+    let low = 0; // Pointer for the red color (0)
+    let high = nums.length - 1; // Pointer for the blue color (2)
+    let i = 0; // Current pointer
+    
+    // Iterate until current pointer crosses the blue pointer
+    while (i <= high) {
+        if (nums[i] === 0) {
+            // If current element is 0, swap with element at low pointer
+            [nums[i], nums[low]] = [nums[low], nums[i]];
+            low++; // Move low pointer to the right
+            i++; // Move current pointer to the right
+        } else if (nums[i] === 2) {
+            // If current element is 2, swap with element at high pointer
+            [nums[i], nums[high]] = [nums[high], nums[i]];
+            high--; // Move high pointer to the left
+        } else {
+            // If current element is 1, no need to swap, just move current pointer
+            i++;
+        }
+    }
+    // At this point, the array is sorted in place
+};
+
+
+
+
+
 // You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
 
 // Increment the large integer by one and return the resulting array of digits.
