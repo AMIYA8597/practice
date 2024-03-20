@@ -33,6 +33,33 @@
 
 
 
+// var sortColors = function(nums) {
+//     let low = 0; // Pointer for the red color (0)
+//     let high = nums.length - 1; // Pointer for the blue color (2)
+//     let i = 0; // Current pointer
+    
+//     // Iterate until current pointer crosses the blue pointer
+//     while (i <= high) {
+//         if (nums[i] === 0) {
+//             // If current element is 0, swap with element at low pointer
+//             [nums[i], nums[low]] = [nums[low], nums[i]];
+//             low++; // Move low pointer to the right
+//             i++; // Move current pointer to the right
+//         } else if (nums[i] === 2) {
+//             // If current element is 2, swap with element at high pointer
+//             [nums[i], nums[high]] = [nums[high], nums[i]];
+//             high--; // Move high pointer to the left
+//         } else {
+//             // If current element is 1, no need to swap, just move current pointer
+//             i++;
+//         }
+//     }
+//     // At this point, the array is sorted in place
+// };
+
+
+
+
 
 
 // Search element in array JS 

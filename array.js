@@ -89,32 +89,32 @@
 
 
     
-// // follow up question  
- // // here i am printing maximum subarray and their sum
+// // // follow up question  
+//  // // here i am printing maximum subarray and their sum
 
-function maxSubnums(nums) {
-    let maxSum =nums[0];
-    let startIdx = 0;
-    let endIdx = 0;
+// function maxSubnums(nums) {
+//     let maxSum =nums[0];
+//     let startIdx = 0;
+//     let endIdx = 0;
 
-    for (let i = 0; i < nums.length; i++) {   // n
-        let currentSum =0;
+//     for (let i = 0; i < nums.length; i++) {   // n
+//         let currentSum =0;
 
-        for (let j =i; j <nums.length; j++) { // n / n-1 / n-2 / n-3 / n-4 ...
-            currentSum= currentSum +nums[j];
-            if (currentSum >maxSum){
-                maxSum =currentSum;
-                startIdx= i;
-                endIdx = j;
-            }
-       }
+//         for (let j =i; j <nums.length; j++) { // n / n-1 / n-2 / n-3 / n-4 ...
+//             currentSum= currentSum +nums[j];
+//             if (currentSum >maxSum){
+//                 maxSum =currentSum;
+//                 startIdx= i;
+//                 endIdx = j;
+//             }
+//        }
         
-    }
-    return {sum :maxSum, subAray: nums.slice(startIdx , endIdx +1)};
-}
+//     }
+//     return {sum :maxSum, subAray: nums.slice(startIdx , endIdx +1)};
+// }
 
-// console.log( "max sub number is",maxSubnums( [-2,4,-3,3,-1,4,1,-4,-8,7]));
-console.log( "max sub number is",maxSubnums( [5,-6,3,8,-12,9,4,-8]));
+// // console.log( "max sub number is",maxSubnums( [-2,4,-3,3,-1,4,1,-4,-8,7]));
+// console.log( "max sub number is",maxSubnums( [5,-6,3,8,-12,9,4,-8]));
 
 
 
@@ -287,29 +287,29 @@ console.log( "max sub number is",maxSubnums( [5,-6,3,8,-12,9,4,-8]));
 
 
 
-var sortColors = function(nums) {
-    let low = 0; // Pointer for the red color (0)
-    let high = nums.length - 1; // Pointer for the blue color (2)
-    let i = 0; // Current pointer
+// var sortColors = function(nums) {
+//     let low = 0; // Pointer for the red color (0)
+//     let high = nums.length - 1; // Pointer for the blue color (2)
+//     let i = 0; // Current pointer
     
-    // Iterate until current pointer crosses the blue pointer
-    while (i <= high) {
-        if (nums[i] === 0) {
-            // If current element is 0, swap with element at low pointer
-            [nums[i], nums[low]] = [nums[low], nums[i]];
-            low++; // Move low pointer to the right
-            i++; // Move current pointer to the right
-        } else if (nums[i] === 2) {
-            // If current element is 2, swap with element at high pointer
-            [nums[i], nums[high]] = [nums[high], nums[i]];
-            high--; // Move high pointer to the left
-        } else {
-            // If current element is 1, no need to swap, just move current pointer
-            i++;
-        }
-    }
-    // At this point, the array is sorted in place
-};
+//     // Iterate until current pointer crosses the blue pointer
+//     while (i <= high) {
+//         if (nums[i] === 0) {
+//             // If current element is 0, swap with element at low pointer
+//             [nums[i], nums[low]] = [nums[low], nums[i]];
+//             low++; // Move low pointer to the right
+//             i++; // Move current pointer to the right
+//         } else if (nums[i] === 2) {
+//             // If current element is 2, swap with element at high pointer
+//             [nums[i], nums[high]] = [nums[high], nums[i]];
+//             high--; // Move high pointer to the left
+//         } else {
+//             // If current element is 1, no need to swap, just move current pointer
+//             i++;
+//         }
+//     }
+//     // At this point, the array is sorted in place
+// };
 
 
 
