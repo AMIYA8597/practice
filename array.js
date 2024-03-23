@@ -145,6 +145,76 @@
 
 
 
+// There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).
+
+// Before being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,4,4,5,6,6,7] might be rotated at pivot index 5 and become [4,5,6,6,7,0,1,2,4,4].
+
+// Given the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.
+
+// You must decrease the overall operation steps as much as possible.
+
+ 
+
+// Example 1:
+
+// Input: nums = [2,5,6,0,0,1,2], target = 0
+// Output: true
+// Example 2:
+
+// Input: nums = [2,5,6,0,0,1,2], target = 3
+// Output: false
+
+
+
+
+// var search = function(nums, target) {
+//     let left = 0;
+//     let right = nums.length - 1;
+    
+//     while (left <= right) {
+//         let mid = Math.floor((left + right) / 2);
+        
+//         if (nums[mid] === target) {
+//             return true;
+//         }
+        
+//         // Check if the left half is sorted
+//         if (nums[left] < nums[mid]) {
+//             if (nums[left] <= target && target < nums[mid]) {
+//                 right = mid - 1; // Search left half
+//             } else {
+//                 left = mid + 1; // Search right half
+//             }
+//         } 
+//         // Check if the right half is sorted
+//         else if (nums[mid] < nums[right]) {
+//             if (nums[mid] < target && target <= nums[right]) {
+//                 left = mid + 1; // Search right half
+//             } else {
+//                 right = mid - 1; // Search left half
+//             }
+//         } 
+//         // Unable to determine which half is sorted
+//         else {
+//             // Skip duplicates
+//             while (left <= right && nums[left] === nums[mid]) {
+//                 left++;
+//             }
+//             while (left <= right && nums[right] === nums[mid]) {
+//                 right--;
+//             }
+//         }
+//     }
+    
+//     return false;
+// };
+
+
+
+
+
+
+
 // Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice. The relative order of the elements should be kept the same.
 
 // Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
