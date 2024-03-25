@@ -144,6 +144,73 @@
 
 
 
+// Given an unsorted integer array nums. Return the smallest positive integer that is not present in nums.
+
+// You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
+
+ 
+
+// Example 1:
+
+// Input: nums = [1,2,0]
+// Output: 3
+// Explanation: The numbers in the range [1,2] are all in the array.
+// Example 2:
+
+// Input: nums = [3,4,-1,1]
+// Output: 2
+// Explanation: 1 is in the array but 2 is missing.
+// Example 3:
+
+// Input: nums = [7,8,9,11,12]
+// Output: 1
+// Explanation: The smallest positive integer 1 is missing.
+
+
+
+
+
+
+
+// var firstMissingPositive = function(nums) {
+//     const n = nums.length;
+ 
+//      // Step 1: Mark numbers <= 0 and > n with a special marker (e.g., n+1)
+//      // (we can ignore them because they will not affect the answer)
+//      for (let i = 0; i < n; i++) {
+//          if (nums[i] <= 0 || nums[i] > n) {
+//              nums[i] = n + 1;
+//          }
+//      }
+ 
+//      // Step 2: Mark each number as present by converting the index for that number to negative
+//      for (let i = 0; i < n; i++) {
+//          const num = Math.abs(nums[i]);
+//          if (num > 0 && num <= n) {
+//              const index = num - 1;
+//              nums[index] = -Math.abs(nums[index]);
+//          }
+//      }
+ 
+//      // Step 3: Find the first positive index, which indicates the smallest missing positive integer
+//      for (let i = 0; i < n; i++) {
+//          if (nums[i] > 0) {
+//              return i + 1;
+//          }
+//      }
+ 
+//      // Step 4: If no positive index is found, the smallest missing positive integer is n + 1
+//      return n + 1; 
+//  };
+
+
+
+
+
+
+
+
+
 // You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
 // Merge nums1 and nums2 into a single array sorted in non-decreasing order.
