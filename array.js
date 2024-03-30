@@ -192,6 +192,58 @@
 
 
 
+
+
+
+
+// Given an integer array nums that may contain duplicates, return all possible 
+// subsets
+//  (the power set).
+
+// The solution set must not contain duplicate subsets. Return the solution in any order.
+
+ 
+
+// Example 1:
+
+// Input: nums = [1,2,2]
+// Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
+// Example 2:
+
+// Input: nums = [0]
+// Output: [[],[0]]
+
+
+
+
+// var subsetsWithDup = function(nums) {
+//         nums.sort((a, b) => a - b); // Sort the array to handle duplicates
+//     const result = [];
+    
+//     function backtrack(start, currentSubset) {
+//         result.push(currentSubset.slice()); // Add the current subset to the result
+        
+//         for (let i = start; i < nums.length; i++) {
+//             if (i > start && nums[i] === nums[i - 1]) continue; // Skip duplicates
+            
+//             currentSubset.push(nums[i]); // Include the current number
+//             backtrack(i + 1, currentSubset); // Explore further with the updated subset
+//             currentSubset.pop(); // Backtrack (remove the last added number)
+//         }
+//     }
+    
+//     backtrack(0, []);
+//     return result;
+// };
+
+
+
+
+
+
+
+
+
 // Given an unsorted integer array nums. Return the smallest positive integer that is not present in nums.
 
 // You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
