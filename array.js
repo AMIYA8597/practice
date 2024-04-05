@@ -47,6 +47,71 @@
 
 
 
+// Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.
+
+// Each number in candidates may only be used once in the combination.
+
+// Note: The solution set must not contain duplicate combinations.
+
+ 
+
+// Example 1:
+
+// Input: candidates = [10,1,2,7,6,1,5], target = 8
+// Output: 
+// [
+// [1,1,6],
+// [1,2,5],
+// [1,7],
+// [2,6]
+// ]
+// Example 2:
+
+// Input: candidates = [2,5,2,1,2], target = 5
+// Output: 
+// [
+// [1,2,2],
+// [5]
+// ]
+
+
+
+
+
+
+
+// function combinationSum2(candidates, target) {
+//     candidates.sort((a, b) => a - b); // Sort candidates to handle duplicates
+//     const result = [];
+    
+//     function backtrack(start, currentSubset, currentSum) {
+//         if (currentSum === target) {
+//             result.push(currentSubset.slice()); // Add the current subset to the result
+//             return;
+//         }
+        
+//         for (let i = start; i < candidates.length; i++) {
+//             // Skip duplicates and avoid going over target sum
+//             if (i > start && candidates[i] === candidates[i - 1]) continue;
+//             if (currentSum + candidates[i] > target) break;
+            
+//             currentSubset.push(candidates[i]); // Include the current candidate
+//             backtrack(i + 1, currentSubset, currentSum + candidates[i]); // Explore further
+//             currentSubset.pop(); // Backtrack (remove the last added candidate)
+//         }
+//     }
+    
+//     backtrack(0, [], 0);
+//     return result;
+// }
+
+
+
+
+
+
+
+
 
 
 // var removeDuplicates = function(nums) {
@@ -194,15 +259,26 @@
 
 
 
+<<<<<<< HEAD
 // Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
 
 // A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 
+=======
+
+
+// Given an integer array nums that may contain duplicates, return all possible 
+// subsets
+//  (the power set).
+
+// The solution set must not contain duplicate subsets. Return the solution in any order.
+>>>>>>> 35daecb1b784c7e5a564c49dbe0b28c821e3001b
 
  
 
 // Example 1:
 
+<<<<<<< HEAD
 // Input: digits = "23"
 // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 // Example 2:
@@ -213,10 +289,19 @@
 
 // Input: digits = "2"
 // Output: ["a","b","c"]
+=======
+// Input: nums = [1,2,2]
+// Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
+// Example 2:
+
+// Input: nums = [0]
+// Output: [[],[0]]
+>>>>>>> 35daecb1b784c7e5a564c49dbe0b28c821e3001b
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -251,11 +336,39 @@
     
 //     backtrack('', digits);
     
+=======
+// var subsetsWithDup = function(nums) {
+//         nums.sort((a, b) => a - b); // Sort the array to handle duplicates
+//     const result = [];
+    
+//     function backtrack(start, currentSubset) {
+//         result.push(currentSubset.slice()); // Add the current subset to the result
+        
+//         for (let i = start; i < nums.length; i++) {
+//             if (i > start && nums[i] === nums[i - 1]) continue; // Skip duplicates
+            
+//             currentSubset.push(nums[i]); // Include the current number
+//             backtrack(i + 1, currentSubset); // Explore further with the updated subset
+//             currentSubset.pop(); // Backtrack (remove the last added number)
+//         }
+//     }
+    
+//     backtrack(0, []);
+>>>>>>> 35daecb1b784c7e5a564c49dbe0b28c821e3001b
 //     return result;
 // };
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> 35daecb1b784c7e5a564c49dbe0b28c821e3001b
 // Given an unsorted integer array nums. Return the smallest positive integer that is not present in nums.
 
 // You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
