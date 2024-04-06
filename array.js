@@ -259,26 +259,15 @@
 
 
 
-<<<<<<< HEAD
 // Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
 
 // A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 
-=======
-
-
-// Given an integer array nums that may contain duplicates, return all possible 
-// subsets
-//  (the power set).
-
-// The solution set must not contain duplicate subsets. Return the solution in any order.
->>>>>>> 35daecb1b784c7e5a564c49dbe0b28c821e3001b
 
  
 
 // Example 1:
 
-<<<<<<< HEAD
 // Input: digits = "23"
 // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 // Example 2:
@@ -289,19 +278,10 @@
 
 // Input: digits = "2"
 // Output: ["a","b","c"]
-=======
-// Input: nums = [1,2,2]
-// Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
-// Example 2:
-
-// Input: nums = [0]
-// Output: [[],[0]]
->>>>>>> 35daecb1b784c7e5a564c49dbe0b28c821e3001b
 
 
 
 
-<<<<<<< HEAD
 
 
 
@@ -336,39 +316,11 @@
     
 //     backtrack('', digits);
     
-=======
-// var subsetsWithDup = function(nums) {
-//         nums.sort((a, b) => a - b); // Sort the array to handle duplicates
-//     const result = [];
-    
-//     function backtrack(start, currentSubset) {
-//         result.push(currentSubset.slice()); // Add the current subset to the result
-        
-//         for (let i = start; i < nums.length; i++) {
-//             if (i > start && nums[i] === nums[i - 1]) continue; // Skip duplicates
-            
-//             currentSubset.push(nums[i]); // Include the current number
-//             backtrack(i + 1, currentSubset); // Explore further with the updated subset
-//             currentSubset.pop(); // Backtrack (remove the last added number)
-//         }
-//     }
-    
-//     backtrack(0, []);
->>>>>>> 35daecb1b784c7e5a564c49dbe0b28c821e3001b
 //     return result;
 // };
 
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
->>>>>>> 35daecb1b784c7e5a564c49dbe0b28c821e3001b
 // Given an unsorted integer array nums. Return the smallest positive integer that is not present in nums.
 
 // You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
@@ -390,6 +342,139 @@
 // Input: nums = [7,8,9,11,12]
 // Output: 1
 // Explanation: The smallest positive integer 1 is missing.
+
+
+
+
+
+
+
+
+
+// Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
+
+// A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+
+
+ 
+
+// Example 1:
+
+// Input: digits = "23"
+// Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+// Example 2:
+
+// Input: digits = ""
+// Output: []
+// Example 3:
+
+// Input: digits = "2"
+// Output: ["a","b","c"]
+
+
+
+
+
+// var letterCombinations = function(digits) {
+//     if (digits.length === 0) return [];
+    
+//     const phoneMap = {
+//         "2": "abc",
+//         "3": "def",
+//         "4": "ghi",
+//         "5": "jkl",
+//         "6": "mno",
+//         "7": "pqrs",
+//         "8": "tuv",
+//         "9": "wxyz"
+//     };
+    
+//     const result = [];
+    
+//     const backtrack = (combination, nextDigits) => {
+//         if (nextDigits.length === 0) {
+//             result.push(combination);
+//         } else {
+//             const currentDigit = nextDigits.substring(0, 1);
+//             const letters = phoneMap[currentDigit];
+//             for (let i = 0; i < letters.length; i++) {
+//                 const letter = letters[i];
+//                 backtrack(combination + letter, nextDigits.substring(1));
+//             }
+//         }
+//     };
+    
+//     backtrack('', digits);
+    
+//     return result;
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+// Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+// Return the maximum amount of water a container can store.
+
+// Notice that you may not slant the container.
+
+ 
+
+// Example 1:
+
+
+// Input: height = [1,8,6,2,5,4,8,3,7]
+// Output: 49
+// Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+// Example 2:
+
+// Input: height = [1,1]
+// Output: 1
+
+
+
+
+
+
+
+
+
+
+// var maxArea = function(height) {
+//     let maxArea = 0;
+// let left = 0;
+// let right = height.length - 1;
+
+// while (left < right) {
+//     // Calculate the current area
+//     const currentArea = Math.min(height[left], height[right]) * (right - left);
+    
+//     // Update maxArea if the current area is greater
+//     maxArea = Math.max(maxArea, currentArea);
+    
+//     // Move the pointer with smaller height inward
+//     if (height[left] < height[right]) {
+//         left++;
+//     } else {
+//         right--;
+//     }
+// }
+
+// return maxArea;
+// };
+
 
 
 
