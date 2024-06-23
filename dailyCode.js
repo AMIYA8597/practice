@@ -1,3 +1,64 @@
+1351. Count Negative Numbers in a Sorted Matrix
+Easy
+Topics
+Companies
+Hint
+Given a m x n matrix grid which is sorted in non-increasing order both row-wise and column-wise, return the number of negative numbers in grid.
+
+ 
+
+Example 1:
+
+Input: grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
+Output: 8
+Explanation: There are 8 negatives number in the matrix.
+Example 2:
+
+Input: grid = [[3,2],[1,0]]
+Output: 0
+
+
+
+
+var countNegatives = function(grid) {
+    let count = 0;
+    let rows = grid.length;
+    let cols = grid[0].length;
+    
+    // Start from the top-right corner of the grid
+    let row = 0;
+    let col = cols - 1;
+    
+    while (row < rows && col >= 0) {
+        if (grid[row][col] < 0) {
+            // If the current element is negative,
+            // all elements below in the same column are also negative.
+            count += (rows - row);
+            // Move to the left column
+            col--;
+        } else {
+            // Move to the next row
+            row++;
+        }
+    }
+    
+    return count;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 29. Divide Two Integers
 Medium
 Topics
