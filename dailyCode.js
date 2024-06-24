@@ -1,21 +1,110 @@
-1351. Count Negative Numbers in a Sorted Matrix
-Easy
-Topics
-Companies
-Hint
-Given a m x n matrix grid which is sorted in non-increasing order both row-wise and column-wise, return the number of negative numbers in grid.
+// Longest Palindromic Substring
+
+
+
+// Given a string s, return the longest 
+// palindromic
+ 
+// substring
+//  in s.
 
  
 
-Example 1:
+// Example 1:
 
-Input: grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
-Output: 8
-Explanation: There are 8 negatives number in the matrix.
-Example 2:
+// Input: s = "babad"
+// Output: "bab"
+// Explanation: "aba" is also a valid answer.
+// Example 2:
 
-Input: grid = [[3,2],[1,0]]
-Output: 0
+// Input: s = "cbbd"
+// Output: "bb"
+
+
+
+
+
+
+function longestPalindrome(s) {
+    // Edge case: if the string is less than 2 characters long, return it as it is.
+    if (s.length < 2) {
+        return s;
+    }
+
+    // Initialize variables to keep track of the starting index and maximum length of the longest palindrome found.
+    let start = 0, maxLength = 1;
+
+    // Helper function to expand around the center and check for palindromes.
+    function expandAroundCenter(left, right) {
+        // Expand as long as the characters on both sides are equal.
+        while (left >= 0 && right < s.length && s[left] === s[right]) {
+            // Calculate the current length of the palindrome.
+            let currentLength = right - left + 1;
+            // If this is the longest palindrome found so far, update the start index and maximum length.
+            if (currentLength > maxLength) {
+                maxLength = currentLength;
+                start = left;
+            }
+            // Move outwards to continue checking for larger palindromes.
+            left--;
+            right++;
+        }
+    }
+
+    // Loop through each character in the string, treating each one as the center of a palindrome.
+    for (let i = 0; i < s.length - 1; i++) {
+        expandAroundCenter(i, i);        // Check for odd-length palindromes (single character center)
+        expandAroundCenter(i, i + 1);    // Check for even-length palindromes (two character center)
+    }
+
+    // Return the longest palindromic substring found.
+    return s.substring(start, start + maxLength);
+}
+
+// Example usage:
+console.log(longestPalindrome("babad")); // Output: "bab" or "aba"
+console.log(longestPalindrome("cbbd"));  // Output: "bb"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 1351. Count Negative Numbers in a Sorted Matrix
+// Easy
+// Topics
+// Companies
+// Hint
+// Given a m x n matrix grid which is sorted in non-increasing order both row-wise and column-wise, return the number of negative numbers in grid.
+
+ 
+
+// Example 1:
+
+// Input: grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
+// Output: 8
+// Explanation: There are 8 negatives number in the matrix.
+// Example 2:
+
+// Input: grid = [[3,2],[1,0]]
+// Output: 0
 
 
 
@@ -59,30 +148,30 @@ var countNegatives = function(grid) {
 
 
 
-29. Divide Two Integers
-Medium
-Topics
-Companies
-Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator.
+// 29. Divide Two Integers
+// Medium
+// Topics
+// Companies
+// Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator.
 
-The integer division should truncate toward zero, which means losing its fractional part. For example, 8.345 would be truncated to 8, and -2.7335 would be truncated to -2.
+// The integer division should truncate toward zero, which means losing its fractional part. For example, 8.345 would be truncated to 8, and -2.7335 would be truncated to -2.
 
-Return the quotient after dividing dividend by divisor.
+// Return the quotient after dividing dividend by divisor.
 
-Note: Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For this problem, if the quotient is strictly greater than 231 - 1, then return 231 - 1, and if the quotient is strictly less than -231, then return -231.
+// Note: Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For this problem, if the quotient is strictly greater than 231 - 1, then return 231 - 1, and if the quotient is strictly less than -231, then return -231.
 
  
 
-Example 1:
+// Example 1:
 
-Input: dividend = 10, divisor = 3
-Output: 3
-Explanation: 10/3 = 3.33333.. which is truncated to 3.
-Example 2:
+// Input: dividend = 10, divisor = 3
+// Output: 3
+// Explanation: 10/3 = 3.33333.. which is truncated to 3.
+// Example 2:
 
-Input: dividend = 7, divisor = -3
-Output: -2
-Explanation: 7/-3 = -2.33333.. which is truncated to -2.
+// Input: dividend = 7, divisor = -3
+// Output: -2
+// Explanation: 7/-3 = -2.33333.. which is truncated to -2.
 
 
 
@@ -185,38 +274,38 @@ console.log(longestCommonPrefix(["dog", "racecar", "car"])); // Output: ""
 
 
 
-74. Search a 2D Matrix
+// 74. Search a 2D Matrix
 
 
 
-You are given an m x n integer matrix matrix with the following two properties:
+// You are given an m x n integer matrix matrix with the following two properties:
 
-Each row is sorted in non-decreasing order.
-The first integer of each row is greater than the last integer of the previous row.
-Given an integer target, return true if target is in matrix or false otherwise.
+// Each row is sorted in non-decreasing order.
+// The first integer of each row is greater than the last integer of the previous row.
+// Given an integer target, return true if target is in matrix or false otherwise.
 
-You must write a solution in O(log(m * n)) time complexity.
+// You must write a solution in O(log(m * n)) time complexity.
 
  
 
-Example 1:
+// Example 1:
 
 
-Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
-Output: true
-Example 2:
+// Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
+// Output: true
+// Example 2:
 
 
-Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13
-Output: false
+// Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13
+// Output: false
  
 
-Constraints:
+// Constraints:
 
-m == matrix.length
-n == matrix[i].length
-1 <= m, n <= 100
--104 <= matrix[i][j], target <= 104
+// m == matrix.length
+// n == matrix[i].length
+// 1 <= m, n <= 100
+// -104 <= matrix[i][j], target <= 104
 
 
 
@@ -273,6 +362,8 @@ var searchMatrix = function(matrix, target) {
 //     alert( 'It is a palindrome');  
 // }  
   
+
+
 // // take input of the string or number from the prompt  
 // const string = prompt('Enter a string or number to check for Palindrome: ');  
   
