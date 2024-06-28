@@ -1,3 +1,188 @@
+// 43. Multiply Strings
+       
+
+// Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
+
+// Note: You must not use any built-in BigInteger library or convert the inputs to integer directly.
+
+
+// Example 1:
+
+// Input: num1 = "2", num2 = "3"
+// Output: "6"
+// Example 2:
+
+// Input: num1 = "123", num2 = "456"
+// Output: "56088"
+
+
+
+
+
+
+var multiply = function(num1, num2) {
+    if(num1 =="0" || num2== "0") {
+        return "0";
+    }
+
+    const n1 = num1.length;
+    const n2 = num2.length;
+
+    const result = Array(n1 +n2).fill(0);
+
+    for(let i = n1 -1; i>= 0; i--) {
+        for(let j = n2-1; j>=0; j--) {
+            const multiply = (num1[i] - "0") * (num2[j] - "0")
+            const sum = multiply + result[i+j+1];
+
+            result[i+j+1] = sum % 10;
+            result[i+j] += Math.floor(sum / 10);
+
+        }
+    }
+
+    let index = 0;
+    while(index<result.length && result[index] ===0) {
+        index++;
+    }
+
+    return result.slice(index).join('')
+
+};
+
+
+
+
+
+
+
+
+// 36. Valid Sudoku
+
+
+// Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+
+// Each row must contain the digits 1-9 without repetition.
+// Each column must contain the digits 1-9 without repetition.
+// Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+// Note:
+
+// A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+// Only the filled cells need to be validated according to the mentioned rules.
+ 
+
+// Example 1:
+
+
+// Input: board = 
+// [["5","3",".",".","7",".",".",".","."]
+// ,["6",".",".","1","9","5",".",".","."]
+// ,[".","9","8",".",".",".",".","6","."]
+// ,["8",".",".",".","6",".",".",".","3"]
+// ,["4",".",".","8",".","3",".",".","1"]
+// ,["7",".",".",".","2",".",".",".","6"]
+// ,[".","6",".",".",".",".","2","8","."]
+// ,[".",".",".","4","1","9",".",".","5"]
+// ,[".",".",".",".","8",".",".","7","9"]]
+// Output: true
+// Example 2:
+
+// Input: board = 
+// [["8","3",".",".","7",".",".",".","."]
+// ,["6",".",".","1","9","5",".",".","."]
+// ,[".","9","8",".",".",".",".","6","."]
+// ,["8",".",".",".","6",".",".",".","3"]
+// ,["4",".",".","8",".","3",".",".","1"]
+// ,["7",".",".",".","2",".",".",".","6"]
+// ,[".","6",".",".",".",".","2","8","."]
+// ,[".",".",".","4","1","9",".",".","5"]
+// ,[".",".",".",".","8",".",".","7","9"]]
+// Output: false
+// Explanation: Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var isValidSudoku = function(board) {
+
+    // Helper function to check if a given list contains duplicates
+    
+    const isValidList = (list) => {
+        let seen = new Set();
+        for (let num of list) {
+            if (num !== '.') {
+                if (seen.has(num)) {
+                    return false;
+                }
+                seen.add(num);
+            }
+        }
+        return true;
+    };
+
+    // Check rows
+    for (let row of board) {
+        if (!isValidList(row)) {
+            return false;
+        }
+    }
+
+    // Check columns
+    for (let col = 0; col < 9; col++) {
+        let column = [];
+        for (let row = 0; row < 9; row++) {
+            column.push(board[row][col]);
+        }
+        if (!isValidList(column)) {
+            return false;
+        }
+    }
+
+    // Check 3x3 sub-boxes
+    for (let boxRow = 0; boxRow < 3; boxRow++) {
+        for (let boxCol = 0; boxCol < 3; boxCol++) {
+            let box = [];
+            for (let row = 0; row < 3; row++) {
+                for (let col = 0; col < 3; col++) {
+                    box.push(board[boxRow * 3 + row][boxCol * 3 + col]);
+                }
+            }
+            if (!isValidList(box)) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 21. Merge Two Sorted Lists
 
 // You are given the heads of two sorted linked lists list1 and list2.
