@@ -22,24 +22,29 @@ meaning that participants are known to each other and there is a level of trust 
    - **Custom Business Logic**: Chaincode is used to define the business logic of transactions. It can be written in Go, JavaScript, and Java.
    
 5. **High Performance and Scalability**:
-   - **Efficient Processing**: Fabric separates transaction processing into three phases: execute, order, and validate, which enhances performance and scalability.
+   - **Efficient Processing**: Fabric separates transaction processing into three phases: execute, order, and validate, 
+   which enhances performance and scalability.
 
 6. **Consensus Mechanisms**:
-   - **Pluggable Consensus**: Various consensus protocols can be used, including RAFT and Byzantine Fault Tolerant (BFT) algorithms.
+   - **Pluggable Consensus**: Various consensus protocols can be used, 
+   including RAFT and Byzantine Fault Tolerant (BFT) algorithms.
 
 ### Usage of Tokens in Hyperledger Fabric
 
-While Hyperledger Fabric itself is not inherently designed for cryptocurrency or token generation like Ethereum, it can still be used to create tokens for specific applications. 
-Here are some ways tokens can be used in Hyperledger Fabric:
+While Hyperledger Fabric itself is not inherently designed for cryptocurrency or token generation like Ethereum, 
+it can still be used to create tokens for specific applications. Here are some ways tokens can be used in Hyperledger Fabric:
 
 1. **Asset Management**:
-   - **Tokenized Assets**: Physical or digital assets can be tokenized, allowing for easier transfer and management on the blockchain.
+   - **Tokenized Assets**: Physical or digital assets can be tokenized, 
+      allowing for easier transfer and management on the blockchain.
 
 2. **Supply Chain Management**:
-   - **Tracking and Traceability**: Tokens can represent goods or batches of products, enabling detailed tracking and traceability throughout the supply chain.
+   - **Tracking and Traceability**: Tokens can represent goods or batches of products, 
+      enabling detailed tracking and traceability throughout the supply chain.
 
 3. **Digital Identity**:
-   - **Credentials and Permissions**: Tokens can be used to manage digital identities, representing credentials or permissions for individuals or entities.
+   - **Credentials and Permissions**: Tokens can be used to manage digital identities, 
+   representing credentials or permissions for individuals or entities.
 
 4. **Loyalty and Reward Programs**:
    - **Customer Rewards**: Businesses can use tokens to represent loyalty points or rewards that customers can earn and redeem.
@@ -50,11 +55,13 @@ Here are some ways tokens can be used in Hyperledger Fabric:
     ensuring secure and transparent elections or decision-making processes.
 
 6. **Inter-Organization Transactions**:
-   - **Settlement and Payments**: Tokens can facilitate transactions between different organizations on the network, acting as a medium of exchange or settlement.
+   - **Settlement and Payments**: Tokens can facilitate transactions between different organizations on the network, 
+   acting as a medium of exchange or settlement.
 
 ### Example of Token Implementation
 
-Tokens in Hyperledger Fabric are typically implemented using chaincode. Here's a simplified example of how a token might be implemented:
+Tokens in Hyperledger Fabric are typically implemented using chaincode. 
+Here's a simplified example of how a token might be implemented:
 
 1. **Define the Token Structure**:
    ```go
