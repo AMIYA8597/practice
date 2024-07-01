@@ -82,11 +82,6 @@ var findMin = function(nums) {
 
 
 
-
-
-
-
-
 // 43. Multiply Strings
        
 

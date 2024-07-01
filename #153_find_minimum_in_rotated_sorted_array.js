@@ -65,3 +65,34 @@ var findMin = function(nums) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var findMin = function(nums) {
+//     let first = 0;
+//     let right = nums.length -1;
+//     while(first < right) {
+//         let middle = Math.floor( (first + right) / 2);
+
+//         if(nums[middle] > nums[right]) {
+//             first = middle +1;
+//         } else {
+//             right = middle 
+//         }
+
+//     }
+//     return nums[first];
+// };
