@@ -69,6 +69,25 @@
 
 
 
+
+// // space complexity ==> //  // this code is  O(1) space complexity
+  
+// const numberBig = (array) =>{    
+
+//     let sum = 0;
+//     for(let i=0;i<array.length;i++){
+//     sum +=array[i]
+    
+//     }
+//     return sum;
+// }
+
+// let score = [34,56,24,64,79,84];
+// console.log(numberBig(score));
+
+
+
+
 // space complexity  //  // this code  O(1) space complexity
 
 const numberBig = (n) =>{    
